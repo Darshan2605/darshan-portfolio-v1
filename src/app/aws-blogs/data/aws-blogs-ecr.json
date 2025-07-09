@@ -1,0 +1,9 @@
+{
+  "blogs": [
+    {
+      "title": "S3 Deploying a Node.js App on AWS ECS Fargate with Docker, ECR, and Load Balancer.",
+      "category": "S3, AWS ECS, AWS Fargate, ECR, Load Balancer",
+      "link": "https://medium.com/@darshanlondhe9/automating-node-js-bfe1f15f113d"
+    }
+  ]
+} 

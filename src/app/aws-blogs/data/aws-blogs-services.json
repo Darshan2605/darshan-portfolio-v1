@@ -1,0 +1,19 @@
+{
+  "services": [
+    "AWS EC2",
+    "AWS IAM",
+    "AWS CLI",
+    "EBS",
+    "Load Balancer",
+    "Auto Scaling",
+    "AWS VPC",
+    "S3",
+    "ECR",
+    "AWS ECS",
+    "CI/CD",
+    "Elastic Beanstalk",
+    "AWS Fargate",
+    "AMI",
+    "Launch Template"
+  ]
+} 

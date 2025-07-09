@@ -1,0 +1,221 @@
+
+
+.awsBlogsMain {
+  
+  min-height: 100vh;
+  
+  margin: 0 auto;
+  padding: 24px 20px 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.awsBlogsHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+ 
+  padding-top: 24px;
+  padding-bottom: 16px;
+  /* Optional: add a box-shadow for separation */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.heading {
+  text-align: center;
+  color: hsl(45, 100%, 72%);
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.filterContainer {
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.serviceFilter {
+  padding: 8px 15px;
+  font-size: 16px;
+  border: 1.5px solid hsl(0, 0%, 25%);
+  border-radius: 4px;
+  background-color: hsl(0, 0%, 17%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  margin: 5px 3px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+  outline: none;
+}
+
+.serviceFilter:hover {
+  background-color: hsl(0, 0%, 25%);
+}
+
+.active {
+  background-color: hsl(45, 100%, 72%) !important;
+  color: hsl(0, 0%, 14%) !important;
+  border-color: hsl(45, 100%, 72%) !important;
+}
+
+.blogPosts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px 0 0 0;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  padding-top: 16px; /* or whatever matches your header height */
+}
+
+.blogPostItem {
+  background: hsl(0, 0%, 17%);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1.5px solid transparent;
+}
+
+.blogPostItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  border: 1.5px solid hsl(45, 100%, 72%);
+}
+
+.blogContent {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+
+.blogMeta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blogCategory {
+  color: hsl(45, 100%, 72%);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.blogItemTitle {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.blogText {
+  color: hsl(0, 0%, 80%);
+  font-size: 0.95em;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.noBlogs {
+  text-align: center;
+  color: hsl(45, 100%, 72%);
+  font-size: 1.1rem;
+  margin: 40px 0;
+}
+
+.pagination {
+  margin-top: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+}
+
+.pageNavBtn {
+  background: hsl(0, 0%, 17%);
+  color: hsl(45, 100%, 72%);
+  border: 1.5px solid hsl(45, 100%, 72%);
+  border-radius: 6px;
+  padding: 7px 18px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  outline: none;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 2px;
+  min-width: 44px;
+}
+
+.pageNavBtn[aria-disabled="true"] {
+  background: hsl(0, 0%, 25%);
+  color: hsl(0, 0%, 60%);
+  border-color: hsl(0, 0%, 25%);
+  cursor: not-allowed;
+}
+
+.activePage {
+  background: hsl(45, 100%, 72%);
+  color: hsl(0, 0%, 14%) !important;
+  border-color: hsl(45, 100%, 72%);
+  font-weight: 700;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .blogPosts {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 12px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .awsBlogsMain {
+    padding: 18px 8px 0 8px;
+  }
+  .blogPosts {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 8px;
+    gap: 18px;
+  }
+  .blogPostItem {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .awsBlogsMain {
+    padding: 10px 2px 0 2px;
+  }
+  .blogPosts {
+    grid-template-columns: 1fr;
+    padding: 0 4px;
+    gap: 10px;
+  }
+  .blogPostItem {
+    min-height: 250px;
+    width: 100%;
+  }
+  .blogContent {
+    padding: 14px;
+  }
+  .cardTitle {
+    font-size: 1.1em;
+  }
+}
+
+

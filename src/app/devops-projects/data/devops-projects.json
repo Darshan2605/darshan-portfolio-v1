@@ -1,0 +1,32 @@
+{
+    "projects": [
+      {
+        "title": "Jenkins CI/CD Projects",
+        "category": "Jenkins",
+        "image": "https://th.bing.com/th/id/OIP.cOyxsw7mopGonJkR_RDN4gHaFG?rs=1&pid=ImgDetMain",
+        "link": "jenkins-projects.html",
+        "description": "Continuous Integration and Continuous Deployment projects using Jenkins pipelines."
+      },
+      {
+        "title": "Docker Containerization Projects",
+        "category": "Docker",
+        "image": "https://c4.wallpaperflare.com/wallpaper/827/3/786/docker-brand-containers-wallpaper-preview.jpg",
+        "link": "docker-projects.html",
+        "description": "Projects demonstrating containerization of applications using Docker."
+      },
+      {
+        "title": "Kubernetes Orchestration Projects",
+        "category": "Kubernetes",
+        "image": "https://d15shllkswkct0.cloudfront.net/wp-content/blogs.dir/1/files/2019/05/Kubernetes_New.png",
+        "link": "kubernetes-projects.html",
+        "description": "Container orchestration and deployment projects using Kubernetes."
+      },
+      {
+        "title": "Shell Scripting Projects",
+        "category": "Bash Scripting",
+        "image": "https://www.pngitem.com/pimgs/m/168-1682766_bash-script-hd-png-download.png",
+        "link": "bash-projects.html",
+        "description": "Automation and system administration projects using Bash shell scripting."
+      }
+    ]
+  } 

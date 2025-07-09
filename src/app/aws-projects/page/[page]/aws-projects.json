@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Static Website with CI/CD Pipeline",
+    "category": "CI/CD, EC2",
+    "image": "/aws-projects-img/1.png",
+    "link": "https://medium.com/@darshanlondhe9/how-to-host-static-website-from-github-repo-on-ec2-using-code-pipeline-service-ci-cd-automation-8bc51f6ff707",
+    "description": "Host Static Website from GitHub Repo on EC2 using Code Pipeline Service."
+  },
+  {
+    "title": "Node.js App on ECS Fargate",
+    "category": "ECS, Fargate, Docker",
+    "image": "/aws-projects-img/2.png",
+    "link": "https://medium.com/@darshanlondhe9/automating-node-js-bfe1f15f113d",
+    "description": "Deploy Node.js App using AWS ECS Fargate with Docker, ECR, and Load Balancer."
+  },
+  {
+    "title": "Automated Elastic Beanstalk Deployment",
+    "category": "Elastic Beanstalk, GitHub Actions",
+    "image": "/aws-projects-img/3.png",
+    "link": "https://medium.com/@darshanlondhe9/streamlining-node-js-deployment-automating-aws-elastic-beanstalk-deployments-with-github-actions-dbeb1123acb5",
+    "description": "Automating AWS Elastic Beanstalk Deployments with GitHub Actions."
+  },
+  {
+    "title": "Docker Deployment on EC2",
+    "category": "EC2, Docker",
+    "image": "/aws-projects-img/4.png",
+    "link": "https://medium.com/@darshanlondhe9/how-to-deploy-nodejs-docker-app-on-aws-ec2-5336e4eb87d7",
+    "description": "Deploy Node.js Application on EC2 using Docker Container."
+  },
+  {
+    "title": "Secure Node.js Deployment",
+    "category": "EC2, Nginx, SSL",
+    "image": "/aws-projects-img/5.png",
+    "link": "https://medium.com/@darshanlondhe9/deploying-a-secure-node-js-8fd704c4ccb3",
+    "description": "Deploy Node.js with Nginx and SSL/TLS using Custom Domain."
+  }
+] 

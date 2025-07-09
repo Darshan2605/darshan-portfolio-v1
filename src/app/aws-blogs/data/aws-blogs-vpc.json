@@ -1,0 +1,39 @@
+{
+  "blogs": [
+    {
+      "title": "Everything About VPC",
+      "category": "AWS VPC",
+      "link": "https://medium.com/@darshanlondhe9/everything-about-vpc-in-aws-9d639b617af0"
+    },
+    {
+      "title": "How to Create VPC, Subnets, Route Tables, Internet Gateway on AWS?",
+      "category": "AWS VPC",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-vpc-subnets-route-tables-internet-gateway-on-aws-ff6949698b4e"
+    },
+    {
+      "title": "Securely Access a Private EC2 from Your Local Machine Using a Bastion Host in AWS",
+      "category": "AWS VPC",
+      "link": "https://medium.com/@darshanlondhe9/securely-access-a-private-ec2-from-your-local-machine-using-a-bastion-host-in-aws-758d1a2982b3"
+    },
+    {
+      "title": "Step-by-Step Guide to Setting Up a NAT Gateway and Connecting Private EC2 to the Internet",
+      "category": "AWS VPC",
+      "link": "https://medium.com/@darshanlondhe9/step-by-step-guide-to-setting-up-a-nat-gateway-and-connecting-private-ec2-to-the-internet-562cba5822ad"
+    },
+    {
+      "title": "Step-by-Step Guide: Setting Up VPC Peering and Connecting EC2 Instances",
+      "category": "AWS VPC",
+      "link": "https://medium.com/@darshanlondhe9/step-by-step-guide-setting-up-vpc-peering-and-connecting-ec2-instances-3cba5838e834"
+    },
+    {
+      "title": "Setting Up AWS Transit Gateway to Connect Multiple VPCs",
+      "category": "AWS VPC",
+      "link": "https://medium.com/@darshanlondhe9/setting-up-aws-transit-gateway-to-connect-multiple-vpcs-d2e8afb4679a"
+    },
+    {
+      "title": "Accessing S3 from a Private EC2 Instance using VPC Endpoint. What is AWS Private Link?",
+      "category": "S3, AWS VPC",
+      "link": "https://medium.com/@darshanlondhe9/accessing-s3-from-a-private-ec2-instance-using-vpc-endpoint-what-is-aws-private-link-b6be48d053f9"
+    }
+  ]
+} 

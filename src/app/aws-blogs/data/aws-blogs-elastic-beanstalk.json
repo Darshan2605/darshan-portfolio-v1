@@ -1,0 +1,9 @@
+{
+  "blogs": [
+    {
+      "title": "Streamlining Node.js Deployment: Automating AWS Elastic Beanstalk Deployments with GitHub Actions.",
+      "category": "Elastic Beanstalk, CI/CD",
+      "link": "https://medium.com/@darshanlondhe9/streamlining-node-js-deployment-automating-aws-elastic-beanstalk-deployments-with-github-actions-dbeb1123acb5"
+    }
+  ]
+} 

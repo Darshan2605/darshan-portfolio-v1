@@ -1,0 +1,14 @@
+{
+  "blogs": [
+    {
+      "title": "How to Create Your Own Custom AMI in AWS?",
+      "category": "AWS EC2 AMI",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-your-own-custom-ami-in-aws-836ec40b36d6"
+    },
+    {
+      "title": "How to Share Our Own Custom AMI with Other Region and Account ID?",
+      "category": "AWS EC2 AMI",
+      "link": "https://medium.com/@darshanlondhe9/how-to-share-our-own-custom-ami-with-other-regeion-and-account-id-e7dec8b80fe8"
+    }
+  ]
+} 

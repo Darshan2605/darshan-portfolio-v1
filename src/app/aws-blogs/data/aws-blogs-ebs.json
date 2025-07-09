@@ -1,0 +1,24 @@
+{
+  "blogs": [
+    {
+      "title": "How to Create EBS Volume, Attach and Mount to EC2?",
+      "category": "AWS EC2, EBS",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-ebs-volume-attach-and-mount-to-ec2-8c898d914dd1"
+    },
+    {
+      "title": "How to Detach EBS Volume from EC2?",
+      "category": "AWS EC2, EBS",
+      "link": "https://medium.com/@darshanlondhe9/how-to-detach-ebs-volume-from-ec2-5cbfc49f7c8a"
+    },
+    {
+      "title": "How to Resize EBS Volume and Resize the File System?",
+      "category": "AWS EC2, EBS",
+      "link": "https://medium.com/@darshanlondhe9/how-to-resize-ebs-volume-and-resize-the-file-system-cfa34e00feb4"
+    },
+    {
+      "title": "How to Attach One EBS Volume to Multiple EC2 Instances?",
+      "category": "AWS EC2, EBS",
+      "link": "https://medium.com/@darshanlondhe9/how-to-attach-one-ebs-volume-to-multiple-ec2-instances-f16cf54ce0c1"
+    }
+  ]
+} 

@@ -1,0 +1,124 @@
+{
+  "blogs": [
+    {
+      "title": "AWS EC2 Creation",
+      "category": "AWS EC2",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-aws-ec2-instance-d92afdddd922"
+    },
+    {
+      "title": "Access Linux EC2 From Linux",
+      "category": "AWS EC2",
+      "link": "https://medium.com/@darshanlondhe9/how-to-connect-with-aws-ec2-using-linux-ssh-agent-0b4f60b9bfa1"
+    },
+    {
+      "title": "Access Windows EC2 from Linux",
+      "category": "AWS EC2",
+      "link": "https://medium.com/@darshanlondhe9/how-to-connect-to-windows-ec2-from-linux-84fe32937249"
+    },
+    {
+      "title": "How to Create Windows EC2",
+      "category": "AWS EC2",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-a-windows-ec2-instance-on-aws-0093c433a9d9"
+    },
+    {
+      "title": "How to install Nginx on EC2",
+      "category": "AWS EC2",
+      "link": "https://medium.com/@darshanlondhe9/how-to-install-nginx-in-aws-ec2-ubuntu-366f474ea89e"
+    },
+    {
+      "title": "How to install Nginx on EC2 using Bootstrap Script",
+      "category": "AWS EC2",
+      "link": "https://medium.com/@darshanlondhe9/how-to-write-bootstrap-script-user-data-to-install-nginx-on-ec2-a9a848753f80"
+    },
+    {
+      "title": "How to Extract EC2 Instance Metadata using 169.254.169.254 command",
+      "category": "AWS EC2",
+      "link": "https://medium.com/@darshanlondhe9/how-to-extract-ec2-instance-metadata-using-169-254-169-254-command-d76c0d9d9c8d"
+    },
+    {
+      "title": "How to Attach Elastic IP to AWS EC2 Instance?",
+      "category": "AWS EC2, Elastic IP",
+      "link": "https://medium.com/@darshanlondhe9/how-to-attach-elastic-ip-to-aws-ec2-instance-7303fff323a1"
+    },
+    {
+      "title": "How to Detach and Release Elastic IP Address from EC2 Instance?",
+      "category": "AWS EC2, Elastic IP",
+      "link": "https://medium.com/@darshanlondhe9/how-to-detach-and-release-elastic-ip-address-from-ec2-instance-f5f70b6258e5"
+    },
+    {
+      "title": "How to Create EBS Volume, Attach and Mount to EC2?",
+      "category": "AWS EC2, EBS",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-ebs-volume-attach-and-mount-to-ec2-8c898d914dd1"
+    },
+    {
+      "title": "How to Detach EBS Volume from EC2?",
+      "category": "AWS EC2, EBS",
+      "link": "https://medium.com/@darshanlondhe9/how-to-detach-ebs-volume-from-ec2-5cbfc49f7c8a"
+    },
+    {
+      "title": "How to Resize EBS Volume and Resize the File System?",
+      "category": "AWS EC2, EBS",
+      "link": "https://medium.com/@darshanlondhe9/how-to-resize-ebs-volume-and-resize-the-file-system-cfa34e00feb4"
+    },
+    {
+      "title": "How to Attach One EBS Volume to Multiple EC2 Instances?",
+      "category": "AWS EC2, EBS",
+      "link": "https://medium.com/@darshanlondhe9/how-to-attach-one-ebs-volume-to-multiple-ec2-instances-f16cf54ce0c1"
+    },
+    {
+      "title": "Classical LB with 3 EC2 Instances",
+      "category": "AWS EC2, Classic Load Balancer",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-a-classic-load-balancer-for-3-ec2-instances-in-aws-aea768c48f30"
+    },
+    {
+      "title": "How to Set Up EC2 Instance to be Accessible Only by Load Balancer?",
+      "category": "AWS EC2, Load Balancer",
+      "link": "https://medium.com/@darshanlondhe9/how-to-set-up-ec2-instance-to-be-accessible-only-by-load-balancer-612ded95b619"
+    },
+    {
+      "title": "How to Create an Application Load Balancer for 3 EC2 Instances using Target Group?",
+      "category": "AWS EC2, Application Load Balancer",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-an-application-load-balancer-for-3-ec2-instances-using-target-group-f1b6bccfd3c5"
+    },
+    {
+      "title": "How to Perform Path-Based Routing Using Application Load Balancer?",
+      "category": "AWS EC2, Application Load Balancer",
+      "link": "https://medium.com/@darshanlondhe9/how-to-perform-path-based-routing-using-application-load-balancer-9646fb65a5f4"
+    },
+    {
+      "title": "What is Stickiness in Application Load Balancer? How to Implement It?",
+      "category": "AWS EC2, Application Load Balancer",
+      "link": "https://medium.com/@darshanlondhe9/what-is-stickiness-in-application-load-balancer-how-to-implement-it-26ed30adcf17"
+    },
+    {
+      "title": "How to Set Up HTTPS Traffic with Application Load Balancer?",
+      "category": "AWS EC2, Application Load Balancer",
+      "link": "https://medium.com/@darshanlondhe9/how-to-set-up-https-traffic-with-application-load-balancer-53b9372a3cdc"
+    },
+    {
+      "title": "How to Set Up a Network Load Balancer on AWS?",
+      "category": "AWS EC2, Network Load Balancer",
+      "link": "https://medium.com/@darshanlondhe9/how-to-set-up-a-network-load-balancer-on-aws-041318b23a6e"
+    },
+    {
+      "title": "How to Create Launch Template on AWS?",
+      "category": "AWS EC2, Launch Template",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-launch-template-on-aws-2d9d6526d022"
+    },
+    {
+      "title": "How to Setup Auto Scaling Group on AWS?",
+      "category": "AWS EC2, Auto Scaling",
+      "link": "https://medium.com/@darshanlondhe9/how-to-setup-auto-scaling-group-on-aws-66387359f33e"
+    },
+    {
+      "title": "How to Create Dynamic Auto Scaling Policy on AWS?",
+      "category": "AWS EC2, Auto Scaling",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-dynamic-auto-scaling-policy-on-aws-11a7c5007e17"
+    },
+    {
+      "title": "How to Host Static Website(From GitHub Repo) on EC2 using Code Pipeline Service(CI/CD Automation) on AWS?",
+      "category": "CI/CD, AWS EC2",
+      "link": "https://medium.com/@darshanlondhe9/how-to-host-static-website-from-github-repo-on-ec2-using-code-pipeline-service-ci-cd-automation-8bc51f6ff707"
+    }
+  ]
+} 

@@ -1,0 +1,14 @@
+{
+  "blogs": [
+    {
+      "title": "How to Host Static Website(From GitHub Repo) on EC2 using Code Pipeline Service(CI/CD Automation) on AWS?",
+      "category": "CI/CD, AWS EC2",
+      "link": "https://medium.com/@darshanlondhe9/how-to-host-static-website-from-github-repo-on-ec2-using-code-pipeline-service-ci-cd-automation-8bc51f6ff707"
+    },
+    {
+      "title": "Streamlining Node.js Deployment: Automating AWS Elastic Beanstalk Deployments with GitHub Actions.",
+      "category": "Elastic Beanstalk, CI/CD",
+      "link": "https://medium.com/@darshanlondhe9/streamlining-node-js-deployment-automating-aws-elastic-beanstalk-deployments-with-github-actions-dbeb1123acb5"
+    }
+  ]
+} 

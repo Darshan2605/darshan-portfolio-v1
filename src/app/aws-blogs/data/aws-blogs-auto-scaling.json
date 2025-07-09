@@ -1,0 +1,14 @@
+{
+  "blogs": [
+    {
+      "title": "How to Setup Auto Scaling Group on AWS?",
+      "category": "AWS EC2, Auto Scaling",
+      "link": "https://medium.com/@darshanlondhe9/how-to-setup-auto-scaling-group-on-aws-66387359f33e"
+    },
+    {
+      "title": "How to Create Dynamic Auto Scaling Policy on AWS?",
+      "category": "AWS EC2, Auto Scaling",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-dynamic-auto-scaling-policy-on-aws-11a7c5007e17"
+    }
+  ]
+} 

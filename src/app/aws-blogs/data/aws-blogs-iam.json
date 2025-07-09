@@ -1,0 +1,24 @@
+{
+  "blogs": [
+    {
+      "title": "AWS Account Creation",
+      "category": "AWS IAM",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-aws-account-5a5054b2c528"
+    },
+    {
+      "title": "IAM Creation",
+      "category": "AWS IAM",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-aws-iam-user-7582105fca74"
+    },
+    {
+      "title": "User Group Creation",
+      "category": "AWS IAM",
+      "link": "https://medium.com/@darshanlondhe9/how-to-create-aws-iam-user-group-622cdda76d94"
+    },
+    {
+      "title": "MFA for Root and IAM user",
+      "category": "AWS IAM",
+      "link": "https://medium.com/@darshanlondhe9/how-to-setup-mfa-for-root-account-and-iam-user-1762182f069f"
+    }
+  ]
+} 

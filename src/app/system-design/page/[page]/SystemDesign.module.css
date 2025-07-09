@@ -1,0 +1,141 @@
+.systemDesignBg {
+  
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.systemDesignMain {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.systemDesignTitle {
+  text-align: center;
+  color: hsl(45, 100%, 72%);
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.blogPosts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px auto 0 auto;
+  width: 100%;
+}
+
+.blogPostItem {
+  background: hsl(0, 0%, 17%);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.blogPostItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.blogBannerBox {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.blogBannerBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blogPostItem:hover .blogBannerBox img {
+  transform: scale(1.05);
+}
+
+.blogContent {
+  padding: 20px;
+}
+
+.blogMeta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blogCategory {
+  color: hsl(45, 100%, 72%);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.blogItemTitle {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.blogText {
+  color: hsl(0, 0%, 80%);
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.blogPostLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .blogPosts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .blogPosts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .blogPostItem {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .systemDesignMain {
+    padding: 24px 8px 10px 8px;
+    max-width: 100vw;
+  }
+  .blogPosts {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  .blogPostItem {
+    min-height: 250px;
+    width: 100%;
+  }
+  .blogItemTitle {
+    font-size: 1.2em;
+  }
+} 
