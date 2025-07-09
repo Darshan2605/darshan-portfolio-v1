@@ -14,7 +14,7 @@ export default function Sidebar() {
             alt="Darshan Londhe"
             width={80}
             height={80}
-            style={{ borderRadius: '20%', width: '110px', height: '110px' }}
+            style={{ borderRadius: '20%', width: '100px', height: '100px' }}
             className="sidebar-avatar-img"
           />
         </figure>
