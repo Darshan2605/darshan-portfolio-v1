@@ -9,7 +9,7 @@ export default function About() {
       </header>
       <section className="about-text">
         <p>
-        I&apos;m Darshan Dilip Londhe, a versatile MERN Developer and DevOps enthusiast passionate about creating innovative, scalable, and efficient solutions for the digital world.
+         I am Darshan Dilip Londhe, a versatile MERN Developer and DevOps enthusiast passionate about creating innovative, scalable, and efficient solutions for the digital world.
         </p>
         <br />
         <br />
