@@ -14,7 +14,7 @@ export default function AwsBlogCard({ blog }) {
         {blog.link && (
           <a
             href={blog.link}
-            className={styles.blogLink}
+            className={`${styles.blogLink} ${styles.blogReadMoreBtn}`}
             target="_blank"
             rel="noopener noreferrer"
           >

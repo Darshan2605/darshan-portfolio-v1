@@ -176,6 +176,26 @@
   pointer-events: none;
 }
 
+.blogReadMoreBtn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  background: hsl(45, 100%, 72%);
+  color: hsl(0, 0%, 14%) !important;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.blogReadMoreBtn:hover {
+  background: hsl(45, 100%, 60%);
+  color: hsl(0, 0%, 10%) !important;
+}
+
 @media screen and (max-width: 1200px) {
   .blogPosts {
     grid-template-columns: 1fr 1fr;
