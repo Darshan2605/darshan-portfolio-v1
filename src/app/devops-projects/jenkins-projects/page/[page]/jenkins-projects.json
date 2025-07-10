@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Install Jenkins on Windows, EC2, and Docker",
+    "category": "Jenkins Installation",
+    "image": "https://th.bing.com/th/id/OIP.cOyxsw7mopGonJkR_RDN4gHaFG?rs=1&pid=ImgDetMain",
+    "link": "https://medium.com/@darshanlondhe9/install-jenkins-on-windows-ec2-ubuntu-467393771054",
+    "description": "Comprehensive guide for installing Jenkins on different platforms including Windows, AWS EC2, and Docker containers.",
+    "date": "2025-01-15"
+  },
+  {
+    "title": "Automating Node.js Build with Jenkins and Github WebHook",
+    "category": "Jenkins Automation",
+    "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*_7rcd8KpQHoWINwkxaUGLg.png",
+    "link": "https://medium.com/@darshanlondhe9/automating-a-node-js-application-build-using-jenkins-and-github-webhook-free-style-project-87043f915c97",
+    "description": "Step-by-step guide on automating Node.js application builds using Jenkins Free Style Project and GitHub Webhook integration.",
+    "date": "2025-01-14"
+  },
+  {
+    "title": "Everything You Need to Know About Jenkins",
+    "category": "Jenkins Guide",
+    "image": "https://th.bing.com/th/id/OIP.cOyxsw7mopGonJkR_RDN4gHaFG?rs=1&pid=ImgDetMain",
+    "link": "https://medium.com/@darshanlondhe9/everything-you-need-to-know-about-jenkins-05202ae33e67",
+    "description": "Complete overview of Jenkins, including core concepts, features, and best practices for CI/CD implementation.",
+    "date": "2025-01-13"
+  },
+  {
+    "title": "Automating Node.js Build with Jenkins Pipeline (Groovy)",
+    "category": "Jenkins Pipeline",
+    "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*_7rcd8KpQHoWINwkxaUGLg.png",
+    "link": "https://medium.com/@darshanlondhe9/automating-a-node-js-application-build-using-jenkins-pipeline-groovy-syntax-github-webhook-00b633a2e57c",
+    "description": "Learn how to automate Node.js builds using Jenkins Pipeline with Groovy syntax and GitHub Webhook integration for both local and public Jenkins servers.",
+    "date": "2025-01-12"
+  },
+  {
+    "title": "Automating Docker Image Build and Push on Docker Hub with Jenkins & Slack Notifications",
+    "category": "Jenkins Pipeline + Slack + GitHub + DockerHub",
+    "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*58t8TabkS3I2gCWXScqlEg.jpeg",
+    "link": "https://medium.com/@darshanlondhe9/automating-docker-image-build-and-push-on-docker-hub-with-jenkins-slack-notifications-555aaf526e14",
+    "description": "This project aims to automate the process of building a Docker image and pushing it to Docker Hub using Jenkins. Additionally, Slack notifications will be integrated to provide real-time updates on the build status.",
+    "date": "2025-01-11"
+  }
+] 

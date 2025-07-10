@@ -1,0 +1,26 @@
+[
+  {
+    "title": "NodeJs and MongoDB App 1 with Docker",
+    "category": "Docker",
+    "image": "https://c4.wallpaperflare.com/wallpaper/827/3/786/docker-brand-containers-wallpaper-preview.jpg",
+    "link": "https://medium.com/@darshanlondhe9/how-to-create-nodejs-and-mongodb-application-with-docker-52e19ba0f8ec",
+    "description": "Created Simple Form Filling App using NodeJs and MongoDB with Docker.",
+    "date": "2025-01-11"
+  },
+  {
+    "title": "Node.js App on ECS Fargate",
+    "category": "ECS, Fargate, Docker",
+    "image": "https://c4.wallpaperflare.com/wallpaper/827/3/786/docker-brand-containers-wallpaper-preview.jpg",
+    "link": "https://medium.com/@darshanlondhe9/automating-node-js-bfe1f15f113d",
+    "description": "Deploy Node.js App using AWS ECS Fargate with Docker, ECR, and Load Balancer.",
+    "date": "2025-01-10"
+  },
+  {
+    "title": "Docker Deployment on EC2",
+    "category": "EC2, Docker",
+    "image": "https://c4.wallpaperflare.com/wallpaper/827/3/786/docker-brand-containers-wallpaper-preview.jpg",
+    "link": "https://medium.com/@darshanlondhe9/how-to-deploy-nodejs-docker-app-on-aws-ec2-5336e4eb87d7",
+    "description": "Deploy Node.js Application on EC2 using Docker Container.",
+    "date": "2025-01-09"
+  }
+] 
