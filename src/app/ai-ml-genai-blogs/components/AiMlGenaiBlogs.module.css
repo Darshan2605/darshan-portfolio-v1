@@ -1,21 +1,12 @@
-.bashProjectsBg {
-
-  min-height: 100vh;
-  color: hsl(0, 0%, 100%);
-}
-
-.bashProjectsMain {
+.main {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  color: hsl(0, 0%, 100%);
   min-height: 100vh;
 }
 
-.bashProjectsTitle {
+.heading {
   text-align: center;
   color: hsl(45, 100%, 72%);
   margin-bottom: 30px;
@@ -31,7 +22,6 @@
   width: 100%;
   padding: 0 30px;
   box-sizing: border-box;
-  flex: 1;
 }
 
 .projectCard {
@@ -59,11 +49,16 @@
   margin: 0;
 }
 
-.cardLink {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+.cardImage {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.projectCard:hover .cardImage {
+  transform: scale(1.05);
 }
 
 .cardContent {
@@ -77,13 +72,6 @@
   gap: 15px;
 }
 
-.cardCategory {
-  color: hsl(45, 100%, 72%);
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
 .dot {
   width: 4px;
   height: 4px;
@@ -93,6 +81,27 @@
 
 .cardDate {
   color: hsl(0, 0%, 60%);
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: hsl(45, 100%, 72%);
+  font-size: 1.1rem;
+}
+
+.errorMessage {
+  text-align: center;
+  color: #ff6b6b;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+.cardCategory {
+  color: hsl(45, 100%, 72%);
+  font-weight: 500;
+  text-transform: uppercase;
   font-size: 14px;
 }
 
@@ -108,6 +117,13 @@
   font-size: 0.95em;
   margin-bottom: 10px;
   line-height: 1.6;
+}
+
+.noProjects {
+  text-align: center;
+  color: hsl(45, 100%, 72%);
+  font-size: 1.1rem;
+  margin: 40px 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -128,7 +144,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .bashProjectsMain {
+  .main {
     padding: 24px 8px 10px 8px;
     max-width: 100vw;
   }

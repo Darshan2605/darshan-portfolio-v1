@@ -1,10 +1,9 @@
-.bashProjectsBg {
-
+.googleAdkBlogsBg {
   min-height: 100vh;
   color: hsl(0, 0%, 100%);
 }
 
-.bashProjectsMain {
+.googleAdkBlogsMain {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 20px;
@@ -15,7 +14,7 @@
   min-height: 100vh;
 }
 
-.bashProjectsTitle {
+.googleAdkBlogsTitle {
   text-align: center;
   color: hsl(45, 100%, 72%);
   margin-bottom: 30px;
@@ -128,7 +127,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .bashProjectsMain {
+  .googleAdkBlogsMain {
     padding: 24px 8px 10px 8px;
     max-width: 100vw;
   }

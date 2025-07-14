@@ -4,7 +4,7 @@ import Image from "next/image";
 const projects = [
   {
     title: "Royalpic",
-    category: "web development",
+    category: ["web development"],
     img: "/images/stock images website.jpg",
     description: "Stock Images Website",
     live: "https://darshan2605.github.io/Stock-Images-Website-2nd-version/",
@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: "RideMate",
-    category: "web development",
+    category: ["web development"],
     img: "/images/RideMate.jpg",
     description: "Uber Clone",
     live: "https://drive.google.com/file/d/1Er_L3ShAr8mTd1MccA2z1aAgm5i61tNE/view?usp=sharing",
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: "Artify",
-    category: "web development",
+    category: ["web development", "ai-ml-genai"],
     img: "/images/Artify.jpg",
     description: "AI Image Generator",
     live: "https://65a5a34478ba5f3215cee0a4--boisterous-vacherin-d70534.netlify.app/",
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: "Memer",
-    category: "web development",
+    category: ["web development"],
     img: "/images/memer.jpg",
     description: "Meme Generator",
     live: "https://endearing-creponne-5f2f52.netlify.app/",
@@ -36,7 +36,7 @@ const projects = [
   },
   {
     title: "BudgetBuddy",
-    category: "web development",
+    category: ["web development"],
     img: "/images/auth-logo.jpg",
     description: "Expense-Tracker-React-Firebase-App",
     live: "https://expense-tracker-darshan.web.app/",
@@ -44,7 +44,7 @@ const projects = [
   },
   {
     title: "JS Projects & Games",
-    category: "web development",
+    category: ["web development"],
     img: "/images/Projects.jpg",
     description: "JavaScript Projects",
     live: "https://darshan2605.github.io/JavaScript-Projects/",
@@ -52,7 +52,7 @@ const projects = [
   },
   {
     title: "HireSphere-Job Portal + AI Mock Interview",
-    category: "web development",
+    category: ["web development", "ai-ml-genai"],
     img: "/images/Ai-Mock.jpg",
     description: "Job Portal + AI Mock Interview",
     live: "https://hire-sphere-job-system-se48.vercel.app/",
@@ -60,7 +60,7 @@ const projects = [
   },
   {
     title: "AWS Services Blogs",
-    category: "devops",
+    category: ["devops"],
     img: "https://wallpaperaccess.com/full/6522668.png",
     description: "AWS Services",
     live: "/aws-blogs/AWS%20EC2/page/1",
@@ -68,7 +68,7 @@ const projects = [
   },
   {
     title: "System Design Blogs",
-    category: "system design",
+    category: ["system design"],
     img: "https://th.bing.com/th/id/OIP.AZfbqUrDER-NUbIPhDbx3QHaDt?w=350&h=175&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
     description: "System Design",
     live: "/system-design/page/1",
@@ -76,7 +76,7 @@ const projects = [
   },
   {
     title: "AWS Projects Blogs",
-    category: "devops",
+    category: ["devops"],
     img: "/images/aws-projects.jpg",
     description: "AWS Projects",
     live: "/aws-projects/page/1",
@@ -84,10 +84,18 @@ const projects = [
   },
   {
     title: "DevOps Projects Blogs",
-    category: "devops",
+    category: ["devops"],
     img: "/images/devops.jpg",
     description: "DevOps Projects",
     live: "/devops-projects/page/1",
+    github: null,
+  },
+  {
+    title: "AI-ML-GenAi Blogs",
+    category: ["ai-ml-genai"],
+    img: "https://th.bing.com/th/id/OIP.mzA7LgqXUTJMBrXXclxf5wHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    description: "AI, ML, and GenAI Blogs",
+    live: "/ai-ml-genai-blogs/page/1",
     github: null,
   },
 ];
@@ -97,6 +105,7 @@ const filterOptions = [
   { label: "Web Development", value: "web development" },
   { label: "DevOps", value: "devops" },
   { label: "System Design", value: "system design" },
+  { label: "AI-ML-GenAi", value: "ai-ml-genai" },
 ];
 
 export default function Portfolio() {
@@ -106,7 +115,7 @@ export default function Portfolio() {
   const filteredProjects =
     selectedFilter === "all"
       ? projects
-      : projects.filter((p) => p.category === selectedFilter);
+      : projects.filter((p) => p.category.includes(selectedFilter));
 
   const handleFilterClick = (value) => {
     setSelectedFilter(value);

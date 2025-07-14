@@ -69,6 +69,20 @@ export default function Blog() {
               </div>
             </a>
           </li>
+          <li className="blog-post-item">
+            <a href="/ai-ml-genai-blogs/page/1">
+              <figure className="blog-banner-box">
+                <img src="https://th.bing.com/th/id/OIP.mzA7LgqXUTJMBrXXclxf5wHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="AI-ML-GenAi Blogs" loading="lazy" />
+              </figure>
+              <div className="blog-content">
+                <div className="blog-meta">
+                  <p className="blog-category">AI/ML/GenAI</p>
+                </div>
+                <h3 className="h3 blog-item-title">AI-ML-GenAi Blogs</h3>
+                <p className="blog-text">AI, ML, and GenAI Blogs</p>
+              </div>
+            </a>
+          </li>
         </ul>
       </section>
     </article>

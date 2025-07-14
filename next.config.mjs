@@ -11,6 +11,9 @@ const nextConfig = {
       'c4.wallpaperflare.com',
       'miro.medium.com',
       'www.pngitem.com',
+      'images.unsplash.com',
+      'www.freepik.com',
+      'storage.googleapis.com',
     ],
   },
 };
