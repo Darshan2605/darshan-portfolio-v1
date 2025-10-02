@@ -1,5 +1,7 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import Link from "next/link";
+import { FaHome } from "react-icons/fa";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600"],
@@ -18,6 +20,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.variable}>
         {children}
+        <Link href="/" aria-label="Home" className="homeFabTopLeft">
+          <FaHome size={14} />
+        </Link>
       </body>
     </html>
   );

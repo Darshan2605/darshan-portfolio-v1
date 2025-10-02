@@ -156,6 +156,35 @@ html { font-family: var(--ff-poppins); }
 
 body { background: var(--smoky-black); }
 
+/* Home floating action button (top-left) */
+.homeFabTopLeft {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #222;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.homeFabTopLeft:hover { filter: brightness(1.1); }
+
+@media (max-width: 480px) {
+  .homeFabTopLeft {
+    top: 10px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
 html, body {
   overflow-x: hidden;
   margin: 0;

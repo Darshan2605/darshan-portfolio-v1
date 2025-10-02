@@ -58,7 +58,7 @@ export default function Blog() {
           <li className="blog-post-item">
             <a href="/system-design/page/1">
               <figure className="blog-banner-box">
-                <img src="https://th.bing.com/th/id/OIP.AZfbqUrDER-NUbIPhDbx3QHaDt?w=350&h=175&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="System Design Blogs" loading="lazy" />
+                <img src="images/system-design.jpg" alt="System Design Blogs" loading="lazy" />
               </figure>
               <div className="blog-content">
                 <div className="blog-meta">
