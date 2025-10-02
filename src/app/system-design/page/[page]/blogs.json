@@ -2,7 +2,7 @@
   {
     "title": "API",
     "category": "System Design",
-    "image": "/images/backend.jpg",
+    "image": "https://sdmntpreastus.oaiusercontent.com/files/00000000-0ac4-61f9-9c38-69fcc5075350/raw?se=2025-10-02T18%3A20%3A32Z&sp=r&sv=2024-08-04&sr=b&scid=fbc8c66e-9209-5ece-b2b1-be2bb9ed0f26&skoid=d5627e4c-566b-4761-a954-54993b0ed17b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-01T23%3A42%3A53Z&ske=2025-10-02T23%3A42%3A53Z&sks=b&skv=2024-08-04&sig=PxqQ4btmfk8/z4a/wWmJgk9sH2jcAgfHeLkPm/y8AJA%3D",
     "link": "/system-design/api/page/1",
     "description": "Explore Multiple Types of API Eg- REST, GraphQL and gRPC — concepts, tradeoffs, and use cases."
   },
