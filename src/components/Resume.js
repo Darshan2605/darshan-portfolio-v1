@@ -7,7 +7,7 @@ export default function Resume() {
         <h2 className="h2 article-title">Resume</h2>
       </header>
       <span className="download-cv">
-        <a href="https://drive.google.com/uc?export=download&id=1PcjGqVQJV0E5tMc8aMO-N5INaXGRCbEU" className="download-btn" download>
+        <a href="https://drive.google.com/file/d/1uGT_gRYStNvcrc8XqxEKXqJ1bO6xhcVj/view?usp=sharing" className="download-btn" download>
           <button type="button" className="btn-download">Download CV</button>
         </a>
       </span>
@@ -51,46 +51,42 @@ export default function Resume() {
         </div>
         <ol className="timeline-list">
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">RideMate (Uber Clone)</h4>
-            <span><a href="https://drive.google.com/file/d/1Er_L3ShAr8mTd1MccA2z1aAgm5i61tNE/view?usp=sharing">Live Link</a></span>
+            <h4 className="h4 timeline-item-title">AWS Blogs</h4>
+            <span><a className="project-link" href="https://darshanlondheportfolio-darshans-projects-18f1c87b.vercel.app/aws-blogs.html">Project Link</a></span>
             <p className="timeline-text">
-              Developed an Uber clone app using the MERN stack to simulate ride-hailing functionalities.
-              <br />Technologies: MongoDB, Express, React, Node.js, WebSocket, Google API
+              • Authored and published AWS tutorials on Medium, providing step-by-step guidance on AWS services.
             </p>
           </li>
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">HireSphere</h4>
-            <span><a href="https://hire-sphere-job-system-se48.vercel.app/">Live Link</a></span>
+            <h4 className="h4 timeline-item-title">CI/CD for Static Website Hosting on EC2</h4>
+            <span><a className="project-link" href="https://medium.com/@darshanlondhe9/how-to-host-static-website-from-github-repo-on-ec2-using-code-pipeline-service-ci-cd-automation-8bc51f6ff707">Project Link</a></span>
             <p className="timeline-text">
-              Designed and developed a Job Application System using the MERN stack to connect candidates and recruiters.
-              <br />Technologies: MongoDB, Express, React, Node.js
+              • Engineered an automated CI/CD pipeline integrating GitHub with AWS CodePipeline, CodeDeploy, and CodeBuild to deploy a static website to EC2.
+              <br />• Technologies: AWS CodePipeline, CodeDeploy, CodeBuild, EC2, GitHub, GitHub Actions, GitHub Secrets, AWS IAM.
             </p>
           </li>
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Royal Pic - Stock Images Website</h4>
-            <span><a href="https://darshan2605.github.io/Stock-Images-Website-2nd-version/">Live Link</a></span>
+            <h4 className="h4 timeline-item-title">Node.js Deployment on AWS ECS Fargate</h4>
+            <span><a className="project-link" href="https://medium.com/@darshanlondhe9/automating-node-js-bfe1f15f113d">Project Link</a></span>
             <p className="timeline-text">
-              Developed a stock images website with a user-friendly interface and high-resolution images.
-              Enhanced user experience and accessibility through intuitive design.
-              <br />Technologies: HTML, CSS, Bootstrap, JavaScript
+              • Automated the deployment of a containerized Node.js app using Docker, pushed to ECR, and deployed to ECS Fargate with Application Load Balancer configuration.
+              <br />• Technologies: Node.js, Docker, AWS ECS Fargate, ECR, ALB.
             </p>
           </li>
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Artify - AI Image Generator</h4>
-            <span><a href="https://65a5a34478ba5f3215cee0a4--boisterous-vacherin-d70534.netlify.app/">Live Link</a></span>
+            <h4 className="h4 timeline-item-title">Jenkins CI/CD for Docker with Slack Notifications</h4>
+            <span><a className="project-link" href="https://medium.com/@darshanlondhe9/automating-docker-image-build-and-push-on-docker-hub-with-jenkins-slack-notifications-555aaf526e14">Project Link</a></span>
             <p className="timeline-text">
-              Created an AI image generation platform allowing users to generate custom AI art. 
-              Over 200 images generated through custom prompts.
-              <br />Technologies: HTML, CSS, JavaScript, React, Hugging Face API.
+              • Engineered a Jenkins pipeline to automate Docker image builds and push to Docker Hub with Slack integration for real-time build alerts.
+              <br />• Technologies: Jenkins, Docker, GitHub, Docker Hub, Slack.
             </p>
           </li>
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Budget Buddy - Expense Tracker</h4>
-            <span><a href="https://expense-tracker-darshan.web.app/">Live Link</a></span>
+            <h4 className="h4 timeline-item-title">NAT Gateway Setup for Private EC2 Access</h4>
+            <span><a className="project-link" href="https://medium.com/@darshanlondhe9/step-by-step-guide-to-setting-up-a-nat-gateway-and-connecting-private-ec2-to-the-internet-562cba5822ad">Project Link</a></span>
             <p className="timeline-text">
-              Developed an expense tracking application with real-time backend support.
-              Implemented user authentication and secure data handling for enhanced security.
-              <br />Technologies: HTML, CSS, JavaScript, React, Firebase
+              • Published a comprehensive tutorial on configuring a NAT Gateway, subnets, and routing to enable internet access for private EC2 instances.
+              <br />• Technologies: AWS VPC, NAT Gateway, EC2, Subnets, Route Tables.
             </p>
           </li>
         </ol>

@@ -78,7 +78,7 @@ export default function Sidebar() {
             <div className="icon-box"><FaLinkedin /></div>
             <div className="contact-info">
               <p className="contact-title">LinkedIn</p>
-              <a href="https://www.linkedin.com/in/darshan-londhe-812303251" className="contact-link" target="_blank" rel="noopener noreferrer">darshan-londhe</a>
+              <a href="https://www.linkedin.com/in/darshan-l-035b5a354/" className="contact-link" target="_blank" rel="noopener noreferrer">darshan-londhe</a>
             </div>
           </li>
           <li className="contact-item">

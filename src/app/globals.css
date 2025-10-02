@@ -909,6 +909,14 @@ main {
   line-height: 1.6;
 }
 
+/* Project link color in Resume timeline */
+.project-link {
+  color: #66b2ff; /* light blue */
+}
+.project-link:hover {
+  color: #99ccff;
+}
+
 
 /**
  * skills 

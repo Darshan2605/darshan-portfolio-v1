@@ -69,7 +69,7 @@ const projects = [
   {
     title: "System Design Blogs",
     category: ["system design"],
-    img: "https://th.bing.com/th/id/OIP.AZfbqUrDER-NUbIPhDbx3QHaDt?w=350&h=175&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+    img: "/images/system-design.png",
     description: "System Design",
     live: "/system-design/page/1",
     github: null,

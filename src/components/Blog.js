@@ -58,7 +58,7 @@ export default function Blog() {
           <li className="blog-post-item">
             <a href="/system-design/page/1">
               <figure className="blog-banner-box">
-                <img src="images/system-design.jpg" alt="System Design Blogs" loading="lazy" />
+                <img src="/images/system-design.png" alt="System Design Blogs" loading="lazy" />
               </figure>
               <div className="blog-content">
                 <div className="blog-meta">
