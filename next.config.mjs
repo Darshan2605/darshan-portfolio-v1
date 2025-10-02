@@ -11,10 +11,17 @@ const nextConfig = {
       'c4.wallpaperflare.com',
       'miro.medium.com',
       'cdn-images-1.medium.com',
+      'cdn-images-2.medium.com',
       'www.pngitem.com',
       'images.unsplash.com',
       'www.freepik.com',
       'storage.googleapis.com',
+    ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.medium.com',
+      },
     ],
   },
 };
