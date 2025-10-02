@@ -1,6 +1,12 @@
 {
   "projects": [
-    
+    {
+      "title": "Mastering Gemini CLI: Introduction, Key Features, and Quick Installation Guide",
+      "category": "GenAI",
+      "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*C6orHLu4iH6CTIncUAfs_A.png",
+      "link": "https://medium.com/@darshanlondhe9/mastering-gemini-cli-introduction-key-features-and-quick-installation-guide-f07722436db2",
+      "description": "Overview of Gemini CLI, capabilities, and how to install it quickly."
+    },
     {
       "title": "Google ADK Projects",
       "category": "Google ADK",

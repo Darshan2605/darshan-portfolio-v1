@@ -1,0 +1,17 @@
+[
+  {
+    "title": "A Beginner’s Guide to GraphQL: The API Query Language You Need to Know",
+    "category": "API",
+    "image": "https://cdn-images-1.medium.com/max/1024/1*1V4L0VhI0z9Y5qMowjXw9g.png",
+    "link": "https://medium.com/@darshanlondhe9/a-beginners-guide-to-graphql-the-api-query-language-you-need-to-know-6b76a8488058?source=rss-7981a8cd7eea------2",
+    "description": "Introduction to GraphQL fundamentals, schema, queries, mutations, and benefits over REST."
+  },
+  {
+    "title": "Everything You Need to Know about gRPC.",
+    "category": "API",
+    "image": "https://cdn-images-1.medium.com/max/1024/1*4J3rfrD0UVA7MdC2ZlT4tw.png",
+    "link": "https://medium.com/@darshanlondhe9/everything-you-need-to-know-about-grpc-8e275d249ffc?source=rss-7981a8cd7eea------2",
+    "description": "Overview of gRPC architecture, protobufs, streaming, performance, and use cases."
+  }
+]
+

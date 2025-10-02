@@ -10,6 +10,7 @@ const nextConfig = {
       'dz2cdn3.dzone.com',
       'c4.wallpaperflare.com',
       'miro.medium.com',
+      'cdn-images-1.medium.com',
       'www.pngitem.com',
       'images.unsplash.com',
       'www.freepik.com',

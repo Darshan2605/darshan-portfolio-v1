@@ -1,10 +1,16 @@
 [
-    {
-      "title": "Apache Kafka: Zomato Simulation Project",
-      "category": "Apache Kafka",
-      "image": "https://dz2cdn3.dzone.com/storage/article-thumb/12418930-thumb.jpg",
-      "link": "https://medium.com/@darshanlondhe9/what-is-apache-kakfka-project-on-kafka-zomato-simulation-82a35e65d34b",
-      "description": "Learn about Apache Kafka through a practical Zomato simulation project, understanding its core concepts and real-world applications."
-    }
-   
-  ]
+  {
+    "title": "API",
+    "category": "System Design",
+    "image": "/images/backend.jpg",
+    "link": "/system-design/api/page/1",
+    "description": "Explore Multiple Types of API Eg- REST, GraphQL and gRPC — concepts, tradeoffs, and use cases."
+  },
+  {
+    "title": "Apache Kafka: Zomato Simulation Project",
+    "category": "Apache Kafka",
+    "image": "https://dz2cdn3.dzone.com/storage/article-thumb/12418930-thumb.jpg",
+    "link": "https://medium.com/@darshanlondhe9/what-is-apache-kakfka-project-on-kafka-zomato-simulation-82a35e65d34b",
+    "description": "Learn about Apache Kafka through a practical Zomato simulation project, understanding its core concepts and real-world applications."
+  }
+]

@@ -1,5 +1,21 @@
 [
   {
+    "title": "Mastering Docker Storage: A Deep Dive into Volumes and Bind Mounts",
+    "category": "Docker",
+    "image": "https://cdn-images-1.medium.com/max/1024/1*qNMBSA34omfkRp6a_90x_g.png",
+    "link": "https://medium.com/@darshanlondhe9/mastering-docker-storage-a-deep-dive-into-volumes-and-bind-mounts-e2e35d0ad379?source=rss-7981a8cd7eea------2",
+    "description": "Covers Docker volumes vs bind mounts, use cases, and best practices.",
+    "date": "2025-10-02"
+  },
+  {
+    "title": "A Deep Dive into the Docker Engine: What Happens When You docker run?",
+    "category": "Docker",
+    "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*cFNrnt_a8OMSqH9l0xSZcA.png",
+    "link": "https://medium.com/@darshanlondhe9/a-deep-dive-into-the-docker-engine-what-happens-when-you-docker-run-61082539b95a",
+    "description": "Explains the internals of Docker Engine when executing docker run.",
+    "date": "2025-10-02"
+  },
+  {
     "title": "NodeJs and MongoDB App 1 with Docker",
     "category": "Docker",
     "image": "https://c4.wallpaperflare.com/wallpaper/827/3/786/docker-brand-containers-wallpaper-preview.jpg",
