@@ -3,28 +3,28 @@
       {
         "title": "Jenkins CI/CD Projects",
         "category": "Jenkins",
-        "image": "https://th.bing.com/th/id/OIP.cOyxsw7mopGonJkR_RDN4gHaFG?rs=1&pid=ImgDetMain",
+        "image": "https://lh3.googleusercontent.com/d/1-2UtoE0g0I_kaETfatobhX5rjsyBFU9K",
         "link": "/devops-projects/jenkins-projects/page/1",
         "description": "Continuous Integration and Continuous Deployment projects using Jenkins pipelines."
       },
       {
         "title": "Docker Containerization Projects",
         "category": "Docker",
-        "image": "https://c4.wallpaperflare.com/wallpaper/827/3/786/docker-brand-containers-wallpaper-preview.jpg",
+        "image": "https://lh3.googleusercontent.com/d/1wHtjJdSx3sD3s5V2dwTFciRM8enWyNgZ",
         "link": "/devops-projects/docker-projects/page/1",
         "description": "Projects demonstrating containerization of applications using Docker."
       },
       {
         "title": "Kubernetes Orchestration Projects",
         "category": "Kubernetes",
-        "image": "https://d15shllkswkct0.cloudfront.net/wp-content/blogs.dir/1/files/2019/05/Kubernetes_New.png",
+        "image": "https://lh3.googleusercontent.com/d/1aR-1Liq_JuDw-Xajf96LwZvXLkYQO3Uw",
         "link": "/devops-projects/kubernetes-projects/page/1",
         "description": "Container orchestration and deployment projects using Kubernetes."
       },
       {
         "title": "Shell Scripting Projects",
         "category": "Bash Scripting",
-        "image": "https://www.pngitem.com/pimgs/m/168-1682766_bash-script-hd-png-download.png",
+        "image": "https://lh3.googleusercontent.com/d/1OYaPU85_YXdlkXl9mv082XlE7myPDKpC",
         "link": "/devops-projects/bash-projects/page/1",
         "description": "Automation and system administration projects using Bash shell scripting."
       }

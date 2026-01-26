@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { FaEnvelope, FaPhone, FaCalendar, FaSchool, FaMapMarkerAlt, FaGithub, FaLinkedin, FaBook, FaChevronDown } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaCalendar, FaSchool, FaMapMarkerAlt, FaGithub, FaLinkedin, FaBook, FaChevronDown, FaBriefcase } from "react-icons/fa";
 
 export default function Sidebar() {
   const [showContacts, setShowContacts] = useState(false);
@@ -19,7 +19,7 @@ export default function Sidebar() {
         </figure>
         <div className="info-content">
           <h1 className="name" title="Darshan Londhe">Darshan Londhe</h1>
-          <p className="title">DevOps Engineer</p>
+          <p className="title">DevOps Engineer at Emplay Inc (Remote)</p>
         </div>
         <button 
           className="info_more-btn" 
@@ -61,6 +61,13 @@ export default function Sidebar() {
               <p className="contact-title">Education</p>
               <p className="contact-value">BE in Computer Engineering</p>
               <address>AISSMS IOIT, Pune (2021-2025)</address>
+            </div>
+          </li>
+          <li className="contact-item">
+            <div className="icon-box"><FaBriefcase /></div>
+            <div className="contact-info">
+              <p className="contact-title">Company</p>
+              <p className="contact-value">Emplay Inc (Remote)</p>
             </div>
           </li>
           <li className="contact-item">

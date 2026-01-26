@@ -60,7 +60,7 @@ export default function Resume() {
                   <li>Handled AKS clusters on Azure for deployments</li>
                   <li>Wrote Bash scripts to automate Zingerx deployment and DB backups on Azure</li>
                   <li>Built AWS Cost Reports for spending analysis of Emplay Inc. on AWS</li>
-                  <li>Cut ZingerxDocker image size by 50% using Distroless images</li>
+                  <li>Cut Zingerx Docker image size by 50% using Distroless images</li>
                   <li>Set up Grafana dashboards for monitoring HPE's Staging and Production AKS clusters on Azure</li>
                 </ul>
               </div>
