@@ -1,21 +1,8 @@
 /*-----------------------------------*\
   DEVOPS PROJECTS - Production Grade Styles
   Matching Portfolio Card Design
+  Note: CSS Variables are defined in globals.css
 \*-----------------------------------*/
-
-/* CSS Variables for consistency */
-:root {
-  --devops-primary: hsl(45, 100%, 72%);
-  --devops-primary-hover: hsl(45, 100%, 60%);
-  --devops-bg-dark: hsl(240, 2%, 12%);
-  --devops-bg-card: hsl(240, 2%, 15%);
-  --devops-bg-card-hover: hsl(240, 2%, 18%);
-  --devops-border: hsl(0, 0%, 22%);
-  --devops-text-primary: hsl(0, 0%, 98%);
-  --devops-text-secondary: hsl(0, 0%, 70%);
-  --devops-shadow: rgba(0, 0, 0, 0.3);
-  --devops-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* ===========================================
    PAGE CONTAINER

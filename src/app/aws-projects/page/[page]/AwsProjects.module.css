@@ -1,21 +1,8 @@
 /*-----------------------------------*\
   AWS PROJECTS - Production Grade Styles
   Matching Portfolio Card Design
+  Note: CSS Variables are defined in globals.css
 \*-----------------------------------*/
-
-/* CSS Variables for consistency */
-:root {
-  --aws-primary: hsl(45, 100%, 72%);
-  --aws-primary-hover: hsl(45, 100%, 60%);
-  --aws-bg-dark: hsl(240, 2%, 12%);
-  --aws-bg-card: hsl(240, 2%, 15%);
-  --aws-bg-card-hover: hsl(240, 2%, 18%);
-  --aws-border: hsl(0, 0%, 22%);
-  --aws-text-primary: hsl(0, 0%, 98%);
-  --aws-text-secondary: hsl(0, 0%, 70%);
-  --aws-shadow: rgba(0, 0, 0, 0.3);
-  --aws-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* ===========================================
    PAGE CONTAINER

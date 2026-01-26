@@ -2,35 +2,8 @@
   UNIFIED BLOG/PROJECT PAGE STYLES
   Production Grade - Consistent Across All Pages
   Used by: AWS Services, System Design, AWS Projects, DevOps Projects
+  Note: CSS Variables are defined in globals.css
 \*-----------------------------------*/
-
-/* ===========================================
-   CSS VARIABLES - Unified Theme
-=========================================== */
-:root {
-  /* Primary Colors */
-  --blog-primary: hsl(45, 100%, 72%);
-  --blog-primary-hover: hsl(45, 100%, 60%);
-  --blog-primary-glow: rgba(255, 208, 105, 0.3);
-  
-  /* Background Colors */
-  --blog-bg-dark: hsl(240, 2%, 12%);
-  --blog-bg-card: hsl(240, 2%, 15%);
-  --blog-bg-card-hover: hsl(240, 2%, 18%);
-  
-  /* Border & Shadow */
-  --blog-border: hsl(0, 0%, 22%);
-  --blog-shadow: rgba(0, 0, 0, 0.3);
-  --blog-shadow-hover: rgba(0, 0, 0, 0.4);
-  
-  /* Text Colors */
-  --blog-text-primary: hsl(0, 0%, 98%);
-  --blog-text-secondary: hsl(0, 0%, 70%);
-  
-  /* Transitions */
-  --blog-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --blog-transition-fast: 0.2s ease;
-}
 
 /* ===========================================
    PAGE CONTAINER - Main Layout (Rounded Box like Main Pages)

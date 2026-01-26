@@ -1,21 +1,8 @@
 /*-----------------------------------*\
   SYSTEM DESIGN - Production Grade Styles
   Matching Portfolio Card Design
+  Note: CSS Variables are defined in globals.css
 \*-----------------------------------*/
-
-/* CSS Variables for consistency */
-:root {
-  --sd-primary: hsl(45, 100%, 72%);
-  --sd-primary-hover: hsl(45, 100%, 60%);
-  --sd-bg-dark: hsl(240, 2%, 12%);
-  --sd-bg-card: hsl(240, 2%, 15%);
-  --sd-bg-card-hover: hsl(240, 2%, 18%);
-  --sd-border: hsl(0, 0%, 22%);
-  --sd-text-primary: hsl(0, 0%, 98%);
-  --sd-text-secondary: hsl(0, 0%, 70%);
-  --sd-shadow: rgba(0, 0, 0, 0.3);
-  --sd-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* ===========================================
    PAGE CONTAINER

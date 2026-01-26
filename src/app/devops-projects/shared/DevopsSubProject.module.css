@@ -1,21 +1,8 @@
 /*-----------------------------------*\
   DEVOPS SUB-PROJECTS - Shared Styles
   Docker, Bash, Jenkins, Kubernetes
+  Note: CSS Variables are defined in globals.css
 \*-----------------------------------*/
-
-/* CSS Variables for consistency */
-:root {
-  --sub-primary: hsl(45, 100%, 72%);
-  --sub-primary-hover: hsl(45, 100%, 60%);
-  --sub-bg-dark: hsl(240, 2%, 12%);
-  --sub-bg-card: hsl(240, 2%, 15%);
-  --sub-bg-card-hover: hsl(240, 2%, 18%);
-  --sub-border: hsl(0, 0%, 22%);
-  --sub-text-primary: hsl(0, 0%, 98%);
-  --sub-text-secondary: hsl(0, 0%, 70%);
-  --sub-shadow: rgba(0, 0, 0, 0.3);
-  --sub-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* ===========================================
    PAGE CONTAINER
