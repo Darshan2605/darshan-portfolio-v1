@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaCode, FaBook } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaBook } from "react-icons/fa";
 
 export default function About() {
   return (
@@ -9,11 +9,16 @@ export default function About() {
       </header>
       <section className="about-text">
         <p>
-         I am Darshan Dilip Londhe, a versatile MERN Developer and DevOps enthusiast passionate about creating innovative, scalable, and efficient solutions for the digital world.
+          DevOps Engineer with hands-on experience in cloud infrastructure, container orchestration, and automation. 
+          Recently completed a 6-month internship at <strong>Emplay Inc</strong>, where I worked on their Agentic AI platform 
+          <strong> Zingerx</strong> for <strong>Hewlett Packard Enterprise (HPE)</strong>.
+        </p>
+        <p style={{ marginTop: '12px' }}>
+          I manage AKS clusters, write automation scripts, optimize Docker images, and build monitoring dashboards. 
+          I focus on making deployments faster, infrastructure reliable, and costs lower.
         </p>
         <br />
-        <br />
-        <p>Social Media:</p>
+        <p>Connect with me:</p>
         <div className="social-media">
           <ul className="social-list">
             <li className="social-item">
@@ -25,18 +30,10 @@ export default function About() {
               </a>
             </li>
             <li className="social-item">
-              <a href="https://www.linkedin.com/in/darshan-londhe-812303251" className="social-link linkedin" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/darshan-l-035b5a354" className="social-link linkedin" target="_blank" rel="noopener noreferrer">
                 <div className="social-icon-container">
                   <FaLinkedin className="social-icon-glow" />
                   <span className="social-label">LinkedIn</span>
-                </div>
-              </a>
-            </li>
-            <li className="social-item">
-              <a href="https://leetcode.com/Darshan_Londhe" className="social-link leetcode" target="_blank" rel="noopener noreferrer">
-                <div className="social-icon-container">
-                  <FaCode className="social-icon-glow" />
-                  <span className="social-label">LeetCode</span>
                 </div>
               </a>
             </li>
@@ -52,89 +49,36 @@ export default function About() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Current Focus Section */}
       <section className="service">
-        <h3 className="h3 service-title">What I'm Doing</h3>
+        <h3 className="h3 service-title">What I Do</h3>
         <ul className="service-list">
-          <li className="service-item">
-            <div className="service-icon-box">
-              <Image src="/images/site.png" width={100} height={100} alt="MERN Development icon" />
-            </div>
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">MERN Development</h4>
-              <p className="service-item-text">
-                Building dynamic, full-stack web applications using MongoDB, Express.js, React.js, and Node.js at a professional level.
-              </p>
-            </div>
-          </li>
           <li className="service-item">
             <div className="service-icon-box">
               <Image src="/images/agile.png" height={100} width={100} alt="DevOps icon" />
             </div>
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">DevOps</h4>
+              <h4 className="h4 service-item-title">DevOps & Cloud</h4>
               <p className="service-item-text">
-                Streamlining workflows with CI/CD pipelines, Docker, Kubernetes, and AWS for efficient deployment and scalability.
-              </p>
-            </div>
-          </li>
-          <li className="service-item">
-            <div className="service-icon-box">
-              <Image src="/images/photoshop.png" height={100} width={100} alt="Photoshop icon" />
-            </div>
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Photoshop</h4>
-              <p className="service-item-text">
-                Crafting stunning visuals and professional designs to enhance your digital presence and branding.
+                Deploy and manage applications on AWS & Azure. Handle Kubernetes clusters, automate workflows, and monitor infrastructure with Grafana.
               </p>
             </div>
           </li>
         </ul>
       </section>
 
-      {/* Clients Section: MERN Development */}
+      {/* Tech Stack */}
       <section className="clients">
-        <h3 className="h3 clients-title">MERN Development</h3>
+        <h3 className="h3 clients-title">Tech Stack</h3>
         <ul className="clients-list has-scrollbar">
           <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="30" alt="MongoDB" />
-            <p>MongoDB</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" height="30" alt="AWS" />
+            <p>AWS</p>
           </li>
           <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="30" alt="Express.js" />
-            <p>Express.js</p>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="30" alt="Azure" />
+            <p>Azure</p>
           </li>
-          <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="React.js" />
-            <p>React.js</p>
-          </li>
-          <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="30" alt="Node.js" />
-            <p>Node.js</p>
-          </li>
-          <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="30" alt="MySQL" />
-            <p>MySQL</p>
-          </li>
-          <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="30" alt="PostgreSQL" />
-            <p>PostgreSQL</p>
-          </li>
-          <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="30" alt="Firebase" />
-            <p>Firebase</p>
-          </li>
-          <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" height="30" alt="GraphQL" />
-            <p>GraphQL</p>
-          </li>
-        </ul>
-      </section>
-
-      {/* Clients Section: DevOps Practices */}
-      <section className="clients">
-        <h3 className="h3 clients-title">DevOps Practices</h3>
-        <ul className="clients-list has-scrollbar">
           <li className="clients-item">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="30" alt="Docker" />
             <p>Docker</p>
@@ -144,28 +88,24 @@ export default function About() {
             <p>Kubernetes</p>
           </li>
           <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="Git" />
-            <p>Git</p>
-          </li>
-          <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" height="30" alt="AWS" />
-            <p>AWS</p>
-          </li>
-          <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="30" alt="Azure" />
-            <p>Azure</p>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" height="30" alt="Terraform" />
+            <p>Terraform</p>
           </li>
           <li className="clients-item">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" height="30" alt="Jenkins" />
             <p>Jenkins</p>
           </li>
           <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" height="30" alt="Terraform" />
-            <p>Terraform</p>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" height="30" alt="Bash" />
+            <p>Bash</p>
           </li>
           <li className="clients-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" height="30" alt="Ansible" />
-            <p>Ansible</p>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" height="30" alt="Grafana" />
+            <p>Grafana</p>
+          </li>
+          <li className="clients-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="Git" />
+            <p>Git</p>
           </li>
         </ul>
       </section>

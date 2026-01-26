@@ -1,20 +1,13 @@
-import DevopsProjectCard from './DevopsProjectCard';
-import styles from './DevopsProjects.module.css';
+import { BlogGrid } from '../../shared/components';
 
 export default function DevopsProjectsGrid({ projects }) {
-  if (!projects || projects.length === 0) {
-    return (
-      <div className={styles.noProjects}>
-        No projects found.
-      </div>
-    );
-  }
-  
   return (
-    <section className={styles.projectsGrid}>
-      {projects.map((project, idx) => (
-        <DevopsProjectCard key={project.title + idx} project={project} />
-      ))}
-    </section>
+    <BlogGrid 
+      items={projects}
+      buttonText="View Project"
+      emptyIcon="🚀"
+      emptyTitle="No projects found"
+      emptyText="Check back later for new DevOps projects."
+    />
   );
 }

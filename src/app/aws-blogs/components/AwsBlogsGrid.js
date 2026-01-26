@@ -1,15 +1,14 @@
-import AwsBlogCard from './AwsBlogCard';
-import styles from './AwsBlogs.module.css';
+import { BlogGrid } from '../../shared/components';
 
 export default function AwsBlogsGrid({ blogs }) {
-  if (!blogs || blogs.length === 0) {
-    return <div className={styles.noBlogs}>No blogs found for this service.</div>;
-  }
   return (
-    <section className={styles.blogPosts}>
-      {blogs.map((blog, idx) => (
-        <AwsBlogCard key={blog.link + idx} blog={blog} />
-      ))}
-    </section>
+    <BlogGrid 
+      items={blogs}
+      buttonText="Read Article"
+      emptyIcon="📭"
+      emptyTitle="No blogs found"
+      emptyText="No blogs available for this service yet."
+      defaultImage="https://wallpaperaccess.com/full/6522668.png"
+    />
   );
 }

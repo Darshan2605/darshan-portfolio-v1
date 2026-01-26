@@ -1,169 +1,447 @@
+/*-----------------------------------*\
+  DEVOPS PROJECTS - Production Grade Styles
+  Matching Portfolio Card Design
+\*-----------------------------------*/
+
+/* CSS Variables for consistency */
+:root {
+  --devops-primary: hsl(45, 100%, 72%);
+  --devops-primary-hover: hsl(45, 100%, 60%);
+  --devops-bg-dark: hsl(240, 2%, 12%);
+  --devops-bg-card: hsl(240, 2%, 15%);
+  --devops-bg-card-hover: hsl(240, 2%, 18%);
+  --devops-border: hsl(0, 0%, 22%);
+  --devops-text-primary: hsl(0, 0%, 98%);
+  --devops-text-secondary: hsl(0, 0%, 70%);
+  --devops-shadow: rgba(0, 0, 0, 0.3);
+  --devops-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===========================================
+   PAGE CONTAINER
+=========================================== */
 .devopsMain {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  padding: 20px;
- 
-  color: hsl(0, 0%, 100%);
   min-height: 100vh;
-}
-
-.heading {
-  text-align: center;
-  color: hsl(45, 100%, 72%);
-  margin-bottom: 30px;
-  font-size: 2.2rem;
-  font-weight: 700;
-  
-}
-
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin: 30px auto 0 auto;
-  width: 100%;
-  padding: 0 30px;
-  box-sizing: border-box;
-}
-
-.projectCard {
-  background: hsl(0, 0%, 17%);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  width: 100%;
-  min-height: 350px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
-.projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+/* ===========================================
+   PAGE HEADER
+=========================================== */
+.heading {
+  text-align: center;
+  background: linear-gradient(135deg, var(--devops-primary) 0%, #e67e22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  padding-top: 20px;
 }
 
-.bannerBox {
+.pageSubtitle {
+  text-align: center;
+  color: var(--devops-text-secondary);
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
+/* ===========================================
+   CARDS GRID
+=========================================== */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* ===========================================
+   CARD COMPONENT
+=========================================== */
+.card {
+  background: linear-gradient(135deg, var(--devops-bg-card), var(--devops-bg-dark));
+  border: 1.5px solid var(--devops-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: var(--devops-transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px var(--devops-shadow);
+  border-color: var(--devops-primary);
+}
+
+/* Card Image */
+.cardImageWrapper {
   position: relative;
+  width: 100%;
   height: 200px;
   overflow: hidden;
-  margin: 0;
 }
 
 .cardImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-  display: block;
+  transition: transform 0.4s ease;
 }
 
-.projectCard:hover .cardImage {
-  transform: scale(1.05);
+.card:hover .cardImage {
+  transform: scale(1.08);
 }
 
+.cardImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+}
+
+/* Card Content */
 .cardContent {
-  padding: 20px;
-}
-
-.cardMeta {
+  padding: 24px;
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  gap: 15px;
-}
-
-.dot {
-  width: 4px;
-  height: 4px;
-  background-color: hsl(0, 0%, 60%);
-  border-radius: 50%;
-}
-
-.cardDate {
-  color: hsl(0, 0%, 60%);
-  font-size: 14px;
-}
-
-.loading {
-  text-align: center;
-  padding: 20px;
-  color: hsl(45, 100%, 72%);
-  font-size: 1.1rem;
-}
-
-.errorMessage {
-  text-align: center;
-  color: #ff6b6b;
-  padding: 20px;
-  font-size: 1.1rem;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
 }
 
 .cardCategory {
-  color: hsl(45, 100%, 72%);
-  font-weight: 500;
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, var(--devops-primary), #e67e22);
+  color: var(--devops-bg-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  width: fit-content;
   text-transform: uppercase;
-  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 .cardTitle {
-  color: hsl(0, 0%, 100%);
-  font-size: 1.3em;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--devops-text-primary);
+  margin: 0;
   line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color var(--devops-transition);
 }
 
-.cardText {
-  color: hsl(0, 0%, 80%);
-  font-size: 0.95em;
-  margin-bottom: 10px;
+.card:hover .cardTitle {
+  color: var(--devops-primary);
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: var(--devops-text-secondary);
+  margin: 0;
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
 }
 
-.noProjects {
+.cardButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--devops-primary), #e67e22);
+  color: var(--devops-bg-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: var(--devops-transition);
+  width: fit-content;
+}
+
+.cardButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 208, 105, 0.4);
+}
+
+/* ===========================================
+   EMPTY STATE
+=========================================== */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
   text-align: center;
-  color: hsl(45, 100%, 72%);
+  grid-column: 1 / -1;
+}
+
+.emptyStateIcon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+
+.emptyStateTitle {
+  color: var(--devops-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.emptyStateText {
+  color: var(--devops-text-secondary);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ===========================================
+   PAGINATION
+=========================================== */
+.paginationNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 48px;
+  padding: 20px 0 32px;
+  flex-wrap: wrap;
+}
+
+.paginationPages {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.paginationBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 16px;
+  background: linear-gradient(135deg, var(--devops-bg-card), var(--devops-bg-dark));
+  color: var(--devops-text-primary);
+  border: 1.5px solid var(--devops-border);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--devops-transition);
+  text-decoration: none;
+}
+
+.paginationBtn:hover:not(.paginationBtnDisabled):not(.paginationBtnActive) {
+  background: var(--devops-bg-card-hover);
+  border-color: var(--devops-primary);
+  transform: translateY(-2px);
+}
+
+.paginationBtnActive {
+  background: linear-gradient(135deg, var(--devops-primary), #e67e22) !important;
+  color: var(--devops-bg-dark) !important;
+  border-color: var(--devops-primary) !important;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 208, 105, 0.3);
+}
+
+.paginationBtnDisabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.paginationEllipsis {
+  color: var(--devops-text-secondary);
+  padding: 0 8px;
   font-size: 1.1rem;
-  margin: 40px 0;
 }
 
+/* ===========================================
+   RESPONSIVE DESIGN
+=========================================== */
+
+/* Large Tablets & Small Desktops */
 @media screen and (max-width: 1200px) {
-  .projectsGrid {
-    grid-template-columns: 1fr 1fr;
-    padding: 0 12px;
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .devopsMain {
+    padding: 20px 20px 40px;
   }
 }
 
+/* Tablets */
 @media screen and (max-width: 900px) {
-  .projectsGrid {
-    grid-template-columns: 1fr 1fr;
-    padding: 0 8px;
+  .devopsMain {
+    padding: 16px 16px 36px;
   }
-  .projectCard {
-    min-height: 300px;
+
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    min-height: 380px;
+  }
+
+  .cardImageWrapper {
+    height: 180px;
+  }
+
+  .cardContent {
+    padding: 20px;
   }
 }
 
+/* Mobile Landscape & Small Tablets */
 @media screen and (max-width: 768px) {
   .devopsMain {
-    padding: 24px 8px 10px 8px;
-    max-width: 100vw;
+    padding: 12px 12px 32px;
   }
-  .projectsGrid {
+
+  .heading {
+    padding-top: 12px;
+    margin-bottom: 8px;
+  }
+
+  .pageSubtitle {
+    margin-bottom: 24px;
+  }
+
+  .cardsGrid {
     grid-template-columns: 1fr;
-    padding: 0 4px;
+    gap: 16px;
   }
-  .projectCard {
-    min-height: 250px;
-    width: 100%;
+
+  .card {
+    min-height: auto;
   }
-  .cardTitle {
-    font-size: 1.1em;
+
+  .cardImageWrapper {
+    height: 200px;
   }
+
   .cardContent {
-    padding: 14px;
+    padding: 18px;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .paginationNav {
+    gap: 8px;
+    margin-top: 32px;
+  }
+
+  .paginationBtn {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 0.9rem;
   }
 }
 
+/* Mobile Portrait */
+@media screen and (max-width: 480px) {
+  .devopsMain {
+    padding: 8px 8px 24px;
+  }
 
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .cardContent {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .cardCategory {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .cardButton {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  .paginationPages {
+    gap: 4px;
+  }
+
+  .paginationBtn {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+}
+
+/* ===========================================
+   ACCESSIBILITY & ANIMATIONS
+=========================================== */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .paginationBtn,
+  .cardButton,
+  .cardImage {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .cardImage {
+    transform: none;
+  }
+}
+
+/* Focus States for Accessibility */
+.paginationBtn:focus-visible,
+.cardButton:focus-visible {
+  outline: 2px solid var(--devops-primary);
+  outline-offset: 2px;
+}
+
+.card:focus-within {
+  border-color: var(--devops-primary);
+  box-shadow: 0 0 0 3px rgba(255, 208, 105, 0.2);
+}

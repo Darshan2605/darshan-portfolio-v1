@@ -3,66 +3,10 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Royalpic",
-    category: ["web development"],
-    img: "/images/stock images website.jpg",
-    description: "Stock Images Website",
-    live: "https://darshan2605.github.io/Stock-Images-Website-2nd-version/",
-    github: "https://github.com/Darshan2605/Stock-Images-Website-2nd-version.git",
-  },
-  {
-    title: "RideMate",
-    category: ["web development"],
-    img: "/images/RideMate.jpg",
-    description: "Uber Clone",
-    live: "https://drive.google.com/file/d/1Er_L3ShAr8mTd1MccA2z1aAgm5i61tNE/view?usp=sharing",
-    github: "https://github.com/Darshan2605/RideMate.git",
-  },
-  {
-    title: "Artify",
-    category: ["web development", "ai-ml-genai"],
-    img: "/images/Artify.jpg",
-    description: "AI Image Generator",
-    live: "https://65a5a34478ba5f3215cee0a4--boisterous-vacherin-d70534.netlify.app/",
-    github: "https://github.com/Darshan2605/Artify-Ai-Image-Generator.git",
-  },
-  {
-    title: "Memer",
-    category: ["web development"],
-    img: "/images/memer.jpg",
-    description: "Meme Generator",
-    live: "https://endearing-creponne-5f2f52.netlify.app/",
-    github: "https://github.com/Darshan2605/Memer-Meme-Generator.git",
-  },
-  {
-    title: "BudgetBuddy",
-    category: ["web development"],
-    img: "/images/auth-logo.jpg",
-    description: "Expense-Tracker-React-Firebase-App",
-    live: "https://expense-tracker-darshan.web.app/",
-    github: "https://github.com/Darshan2605/BudgetBuddy.git",
-  },
-  {
-    title: "JS Projects & Games",
-    category: ["web development"],
-    img: "/images/Projects.jpg",
-    description: "JavaScript Projects",
-    live: "https://darshan2605.github.io/JavaScript-Projects/",
-    github: "https://github.com/Darshan2605/JavaScript-Projects.git",
-  },
-  {
-    title: "HireSphere-Job Portal + AI Mock Interview",
-    category: ["web development", "ai-ml-genai"],
-    img: "/images/Ai-Mock.jpg",
-    description: "Job Portal + AI Mock Interview",
-    live: "https://hire-sphere-job-system-se48.vercel.app/",
-    github: "https://github.com/Darshan2605/HireSphere-AI-Mock-Interview.git",
-  },
-  {
     title: "AWS Services Blogs",
     category: ["devops"],
     img: "https://wallpaperaccess.com/full/6522668.png",
-    description: "AWS Services",
+    description: "Comprehensive blogs on AWS Services, best practices, and tutorials.",
     live: "/aws-blogs/AWS%20EC2/page/1",
     github: null,
   },
@@ -70,7 +14,7 @@ const projects = [
     title: "System Design Blogs",
     category: ["system design"],
     img: "/images/system-design.png",
-    description: "System Design",
+    description: "In-depth system design concepts, patterns, and architectures.",
     live: "/system-design/page/1",
     github: null,
   },
@@ -78,7 +22,7 @@ const projects = [
     title: "AWS Projects Blogs",
     category: ["devops"],
     img: "/images/aws-projects.jpg",
-    description: "AWS Projects",
+    description: "Hands-on AWS projects with step-by-step implementation guides.",
     live: "/aws-projects/page/1",
     github: null,
   },
@@ -86,26 +30,16 @@ const projects = [
     title: "DevOps Projects Blogs",
     category: ["devops"],
     img: "/images/devops.jpg",
-    description: "DevOps Projects",
+    description: "DevOps projects featuring CI/CD, Docker, Kubernetes, and more.",
     live: "/devops-projects/page/1",
-    github: null,
-  },
-  {
-    title: "AI-ML-GenAi Blogs",
-    category: ["ai-ml-genai"],
-    img: "https://th.bing.com/th/id/OIP.mzA7LgqXUTJMBrXXclxf5wHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-    description: "AI, ML, and GenAI Blogs",
-    live: "/ai-ml-genai-blogs/page/1",
     github: null,
   },
 ];
 
 const filterOptions = [
   { label: "All", value: "all" },
-  { label: "Web Development", value: "web development" },
   { label: "DevOps", value: "devops" },
   { label: "System Design", value: "system design" },
-  { label: "AI-ML-GenAi", value: "ai-ml-genai" },
 ];
 
 export default function Portfolio() {
@@ -183,37 +117,34 @@ export default function Portfolio() {
           </ul>
         </div>
         {/* Project Cards */}
-        <ul className="project-list">
+        <ul className="project-grid">
           {filteredProjects.map((project, idx) => (
             <li
-              className="project-item active"
+              className="project-card"
               data-filter-item
               data-category={project.category}
               key={project.title + idx}
             >
-              <div>
-                <figure className="project-img">
-                  <div className="project-item-icon-box">
-                    <i className="fa-solid fa-eye"></i>
-                  </div>
-                  <Image src={project.img} alt={project.title} width={225} height={225} style={{objectFit: 'cover', width: '100%', height: '200px', borderRadius: '10px'}} />
-                </figure>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-category">{project.description}</p>
-                <div className="project-buttons">
+              <div className="project-card-img">
+                <Image 
+                  src={project.img} 
+                  alt={project.title} 
+                  width={300} 
+                  height={180} 
+                  style={{objectFit: 'cover', width: '100%', height: '180px'}} 
+                />
+              </div>
+              <div className="project-card-content">
+                <h3 className="project-card-title">{project.title}</h3>
+                <p className="project-card-description">{project.description}</p>
+                <div className="project-card-buttons">
                   {project.live && (
-                    <a
-                      href={project.live}
-                      className="live-button"
-                    >
-                      Live
+                    <a href={project.live} className="project-card-link">
+                      View Project
                     </a>
                   )}
                   {project.github && (
-                    <a
-                      href={project.github}
-                      className="github-button"
-                    >
+                    <a href={project.github} className="project-card-link github" target="_blank" rel="noopener noreferrer">
                       GitHub
                     </a>
                   )}

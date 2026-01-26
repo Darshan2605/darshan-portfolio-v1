@@ -19,6 +19,8 @@ const nextConfig = {
       'images.unsplash.com',
       'www.freepik.com',
       'storage.googleapis.com',
+      'images.credly.com',
+      'drive.google.com',
     ],
     remotePatterns: [
       {
@@ -36,6 +38,22 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'user-gen-media-assets.s3.amazonaws.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.credly.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.cloudfront.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'drive.google.com',
       },
     ],
   },

@@ -1,5 +1,36 @@
 import Image from "next/image";
 
+const blogs = [
+  {
+    title: "All AWS Blogs",
+    category: "AWS",
+    img: "https://wallpaperaccess.com/full/6522668.png",
+    description: "Comprehensive blogs on AWS Services, best practices, and tutorials.",
+    link: "/aws-blogs/AWS%20EC2/page/1",
+  },
+  {
+    title: "All AWS Projects",
+    category: "AWS",
+    img: "/images/aws-projects.jpg",
+    description: "Hands-on AWS projects with step-by-step implementation guides.",
+    link: "/aws-projects/page/1",
+  },
+  {
+    title: "DevOps Projects",
+    category: "DevOps",
+    img: "/images/devops.jpg",
+    description: "DevOps projects featuring CI/CD, Docker, Kubernetes, and more.",
+    link: "/devops-projects/page/1",
+  },
+  {
+    title: "All System Design Blogs",
+    category: "System Design",
+    img: "/images/system-design.png",
+    description: "In-depth system design concepts, patterns, and architectures.",
+    link: "/system-design/page/1",
+  },
+];
+
 export default function Blog() {
   return (
     <article className="blog active" data-page="blog">
@@ -7,83 +38,32 @@ export default function Blog() {
         <h2 className="h2 article-title">Blog</h2>
       </header>
       <span className="blogs">
-        <a href="https://medium.com/@darshanlondhe9" className="blogs-btn" download>
-          <button type="button" className="btn-blogs">My Blogs</button>
+        <a href="https://medium.com/@darshanlondhe9" className="blogs-btn" target="_blank" rel="noopener noreferrer">
+          <button type="button" className="btn-blogs">My Medium Blogs</button>
         </a>
       </span>
-      <section className="blog-posts">
-        <ul className="blog-posts-list">
-          <li className="blog-post-item">
-            <a href="/aws-blogs/AWS%20EC2/page/1">
-              <figure className="blog-banner-box">
-                <img src="https://wallpaperaccess.com/full/6522668.png" alt="AWS Blogs" loading="lazy" />
-              </figure>
-              <div className="blog-content">
-                <div className="blog-meta">
-                  <p className="blog-category">AWS</p>
-                </div>
-                <h3 className="h3 blog-item-title">All AWS Blogs</h3>
-                <p className="blog-text">Blogs on AWS Services, How to use them, and much more.</p>
-              </div>
-            </a>
-          </li>
-          <li className="blog-post-item">
-            <a href="/aws-projects/page/1">
-              <figure className="blog-banner-box">
-                <Image src="/images/aws-projects.jpg" alt="AWS Projects" width={400} height={225} style={{objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '10px'}} />
-              </figure>
-              <div className="blog-content">
-                <div className="blog-meta">
-                  <p className="blog-category">AWS</p>
-                </div>
-                <h3 className="h3 blog-item-title">All AWS Projects</h3>
-                <p className="blog-text">Blogs on AWS Projects, How to use them, and much more.</p>
-              </div>
-            </a>
-          </li>
-          <li className="blog-post-item">
-            <a href="/devops-projects/page/1">
-              <figure className="blog-banner-box">
-                <img src="/images/devops.jpg" alt="DevOps Projects" loading="lazy" />
-              </figure>
-              <div className="blog-content">
-                <div className="blog-meta">
-                  <p className="blog-category">DevOps</p>
-                </div>
-                <h3 className="h3 blog-item-title">DevOps Projects</h3>
-                <p className="blog-text">Blogs on DevOps Projects, How to use them, and much more.</p>
-              </div>
-            </a>
-          </li>
-          <li className="blog-post-item">
-            <a href="/system-design/page/1">
-              <figure className="blog-banner-box">
-                <img src="/images/system-design.png" alt="System Design Blogs" loading="lazy" />
-              </figure>
-              <div className="blog-content">
-                <div className="blog-meta">
-                  <p className="blog-category">System Design</p>
-                </div>
-                <h3 className="h3 blog-item-title">All System Design Blogs</h3>
-                <p className="blog-text">Blogs on System Design concepts, patterns, and real-world architectures.</p>
-              </div>
-            </a>
-          </li>
-          <li className="blog-post-item">
-            <a href="/ai-ml-genai-blogs/page/1">
-              <figure className="blog-banner-box">
-                <img src="https://th.bing.com/th/id/OIP.mzA7LgqXUTJMBrXXclxf5wHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="AI-ML-GenAi Blogs" loading="lazy" />
-              </figure>
-              <div className="blog-content">
-                <div className="blog-meta">
-                  <p className="blog-category">AI/ML/GenAI</p>
-                </div>
-                <h3 className="h3 blog-item-title">AI-ML-GenAi Blogs</h3>
-                <p className="blog-text">AI, ML, and GenAI Blogs</p>
-              </div>
-            </a>
-          </li>
-        </ul>
+      <section className="blog-grid">
+        {blogs.map((blog, idx) => (
+          <div className="blog-card" key={idx}>
+            <div className="blog-card-img">
+              <Image
+                src={blog.img}
+                alt={blog.title}
+                width={400}
+                height={200}
+                style={{ objectFit: "cover", width: "100%", height: "180px" }}
+              />
+            </div>
+            <div className="blog-card-content">
+              <span className="blog-card-category">{blog.category}</span>
+              <h3 className="blog-card-title">{blog.title}</h3>
+              <p className="blog-card-description">{blog.description}</p>
+              <a href={blog.link} className="blog-card-link">
+                Read More
+              </a>
+            </div>
+          </div>
+        ))}
       </section>
     </article>
   );

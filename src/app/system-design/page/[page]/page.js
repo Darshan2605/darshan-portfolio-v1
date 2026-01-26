@@ -1,9 +1,13 @@
 import blogs from './blogs.json';
-import Image from 'next/image';
-import styles from './SystemDesign.module.css';
+import { BlogGrid, BlogPagination } from '../../../shared/components';
+import styles from '../../../shared/BlogPage.module.css';
 
+// Configuration
 const BLOGS_PER_PAGE = 6;
 
+/**
+ * Generate static params for all pages
+ */
 export function generateStaticParams() {
   const totalPages = Math.ceil(blogs.length / BLOGS_PER_PAGE);
   return Array.from({ length: totalPages }, (_, i) => ({
@@ -11,78 +15,52 @@ export function generateStaticParams() {
   }));
 }
 
+/**
+ * Generate metadata for SEO
+ */
+export async function generateMetadata({ params }) {
+  const { page } = await params;
+  return {
+    title: `System Design - Page ${page} | Portfolio`,
+    description: 'Explore system design concepts, patterns, architectures, and real-world case studies.',
+  };
+}
+
+/**
+ * System Design Page Component
+ */
 export default async function SystemDesignPage({ params }) {
-  const page = parseInt((await params).page, 10) || 1;
+  const { page } = await params;
+  const currentPage = parseInt(page, 10) || 1;
   const totalPages = Math.ceil(blogs.length / BLOGS_PER_PAGE);
-  const startIdx = (page - 1) * BLOGS_PER_PAGE;
-  const endIdx = startIdx + BLOGS_PER_PAGE;
-  const currentBlogs = blogs.slice(startIdx, endIdx);
+  
+  const startIdx = (currentPage - 1) * BLOGS_PER_PAGE;
+  const currentBlogs = blogs.slice(startIdx, startIdx + BLOGS_PER_PAGE);
 
   return (
-    <div className={styles.systemDesignBg}>
-      <main className={styles.systemDesignMain}>
-        <h1 className={styles.systemDesignTitle}>System Design</h1>
-        <section className={styles.blogPosts}>
-          {currentBlogs.map((project, idx) => (
-            <div className={styles.blogPostItem} key={startIdx + idx}>
-              <a href={project.link} className={styles.blogPostLink}>
-                <figure className={styles.blogBannerBox}>
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={400}
-                    height={200}
-                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                    unoptimized={false}
-                  />
-                </figure>
-                <div className={styles.blogContent}>
-                  <div className={styles.blogMeta}>
-                    <p className={styles.blogCategory}>{project.category}</p>
-                  </div>
-                  <h3 className={styles.blogItemTitle}>{project.title}</h3>
-                  <p className={styles.blogText}>{project.description}</p>
-                </div>
-              </a>
-            </div>
-          ))}
-        </section>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', margin: '32px 0' }}>
-          <a
-            href={page > 1 ? `/system-design/page/${page - 1}` : '#'}
-            style={{
-              pointerEvents: page === 1 ? 'none' : 'auto',
-              opacity: page === 1 ? 0.5 : 1,
-              padding: '8px 16px',
-              borderRadius: '6px',
-              border: 'none',
-              background: '#222',
-              color: '#fff',
-              textDecoration: 'none',
-            }}
-          >
-            Prev
-          </a>
-          <span style={{ color: '#fff', alignSelf: 'center' }}>
-            Page {page} of {totalPages}
-          </span>
-          <a
-            href={page < totalPages ? `/system-design/page/${page + 1}` : '#'}
-            style={{
-              pointerEvents: page === totalPages ? 'none' : 'auto',
-              opacity: page === totalPages ? 0.5 : 1,
-              padding: '8px 16px',
-              borderRadius: '6px',
-              border: 'none',
-              background: '#222',
-              color: '#fff',
-              textDecoration: 'none',
-            }}
-          >
-            Next
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className={styles.pageMain}>
+      <div className={styles.pageContent}>
+        <header className={styles.pageHeader}>
+          <h1 className={styles.pageTitle}>System Design</h1>
+          <p className={styles.pageSubtitle}>
+            Concepts, patterns, and real-world architectures
+          </p>
+        </header>
+
+        <BlogGrid 
+          items={currentBlogs}
+          buttonText="Explore"
+          emptyIcon="📭"
+          emptyTitle="No blogs found"
+          emptyText="Check back later for new content."
+        />
+
+        <BlogPagination 
+          basePath="/system-design/page"
+          currentPage={currentPage}
+          totalPages={totalPages}
+        />
+      </div>
+    </main>
   );
-} 
+}

@@ -1,20 +1,20 @@
 /*-----------------------------------*\
-  SYSTEM DESIGN - Production Grade Styles
-  Matching Portfolio Card Design
+  DEVOPS SUB-PROJECTS - Shared Styles
+  Docker, Bash, Jenkins, Kubernetes
 \*-----------------------------------*/
 
 /* CSS Variables for consistency */
 :root {
-  --sd-primary: hsl(45, 100%, 72%);
-  --sd-primary-hover: hsl(45, 100%, 60%);
-  --sd-bg-dark: hsl(240, 2%, 12%);
-  --sd-bg-card: hsl(240, 2%, 15%);
-  --sd-bg-card-hover: hsl(240, 2%, 18%);
-  --sd-border: hsl(0, 0%, 22%);
-  --sd-text-primary: hsl(0, 0%, 98%);
-  --sd-text-secondary: hsl(0, 0%, 70%);
-  --sd-shadow: rgba(0, 0, 0, 0.3);
-  --sd-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --sub-primary: hsl(45, 100%, 72%);
+  --sub-primary-hover: hsl(45, 100%, 60%);
+  --sub-bg-dark: hsl(240, 2%, 12%);
+  --sub-bg-card: hsl(240, 2%, 15%);
+  --sub-bg-card-hover: hsl(240, 2%, 18%);
+  --sub-border: hsl(0, 0%, 22%);
+  --sub-text-primary: hsl(0, 0%, 98%);
+  --sub-text-secondary: hsl(0, 0%, 70%);
+  --sub-shadow: rgba(0, 0, 0, 0.3);
+  --sub-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===========================================
@@ -43,7 +43,7 @@
 }
 
 .pageTitle {
-  background: linear-gradient(135deg, var(--sd-primary) 0%, #e67e22 100%);
+  background: linear-gradient(135deg, var(--sub-primary) 0%, #e67e22 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -54,7 +54,7 @@
 }
 
 .pageSubtitle {
-  color: var(--sd-text-secondary);
+  color: var(--sub-text-secondary);
   font-size: 1.1rem;
   font-weight: 400;
   margin: 0;
@@ -74,11 +74,11 @@
    CARD COMPONENT
 =========================================== */
 .card {
-  background: linear-gradient(135deg, var(--sd-bg-card), var(--sd-bg-dark));
-  border: 1.5px solid var(--sd-border);
+  background: linear-gradient(135deg, var(--sub-bg-card), var(--sub-bg-dark));
+  border: 1.5px solid var(--sub-border);
   border-radius: 16px;
   overflow: hidden;
-  transition: var(--sd-transition);
+  transition: var(--sub-transition);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -87,8 +87,8 @@
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px var(--sd-shadow);
-  border-color: var(--sd-primary);
+  box-shadow: 0 20px 40px var(--sub-shadow);
+  border-color: var(--sub-primary);
 }
 
 /* Card Image */
@@ -129,8 +129,8 @@
 .cardCategory {
   display: inline-block;
   padding: 6px 14px;
-  background: linear-gradient(135deg, var(--sd-primary), #e67e22);
-  color: var(--sd-bg-dark);
+  background: linear-gradient(135deg, var(--sub-primary), #e67e22);
+  color: var(--sub-bg-dark);
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 20px;
@@ -142,23 +142,23 @@
 .cardTitle {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--sd-text-primary);
+  color: var(--sub-text-primary);
   margin: 0;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  transition: color var(--sd-transition);
+  transition: color var(--sub-transition);
 }
 
 .card:hover .cardTitle {
-  color: var(--sd-primary);
+  color: var(--sub-primary);
 }
 
 .cardDescription {
   font-size: 0.95rem;
-  color: var(--sd-text-secondary);
+  color: var(--sub-text-secondary);
   margin: 0;
   line-height: 1.6;
   display: -webkit-box;
@@ -174,13 +174,13 @@
   justify-content: center;
   margin-top: auto;
   padding: 12px 28px;
-  background: linear-gradient(135deg, var(--sd-primary), #e67e22);
-  color: var(--sd-bg-dark);
+  background: linear-gradient(135deg, var(--sub-primary), #e67e22);
+  color: var(--sub-bg-dark);
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
   border-radius: 25px;
-  transition: var(--sd-transition);
+  transition: var(--sub-transition);
   width: fit-content;
 }
 
@@ -208,14 +208,14 @@
 }
 
 .emptyStateTitle {
-  color: var(--sd-primary);
+  color: var(--sub-primary);
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 8px;
 }
 
 .emptyStateText {
-  color: var(--sd-text-secondary);
+  color: var(--sub-text-secondary);
   font-size: 1rem;
   margin: 0;
 }
@@ -246,27 +246,27 @@
   min-width: 44px;
   height: 44px;
   padding: 0 16px;
-  background: linear-gradient(135deg, var(--sd-bg-card), var(--sd-bg-dark));
-  color: var(--sd-text-primary);
-  border: 1.5px solid var(--sd-border);
+  background: linear-gradient(135deg, var(--sub-bg-card), var(--sub-bg-dark));
+  color: var(--sub-text-primary);
+  border: 1.5px solid var(--sub-border);
   border-radius: 10px;
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  transition: var(--sd-transition);
+  transition: var(--sub-transition);
   text-decoration: none;
 }
 
 .paginationBtn:hover:not(.paginationBtnDisabled):not(.paginationBtnActive) {
-  background: var(--sd-bg-card-hover);
-  border-color: var(--sd-primary);
+  background: var(--sub-bg-card-hover);
+  border-color: var(--sub-primary);
   transform: translateY(-2px);
 }
 
 .paginationBtnActive {
-  background: linear-gradient(135deg, var(--sd-primary), #e67e22) !important;
-  color: var(--sd-bg-dark) !important;
-  border-color: var(--sd-primary) !important;
+  background: linear-gradient(135deg, var(--sub-primary), #e67e22) !important;
+  color: var(--sub-bg-dark) !important;
+  border-color: var(--sub-primary) !important;
   font-weight: 600;
   box-shadow: 0 4px 15px rgba(255, 208, 105, 0.3);
 }
@@ -278,7 +278,7 @@
 }
 
 .paginationEllipsis {
-  color: var(--sd-text-secondary);
+  color: var(--sub-text-secondary);
   padding: 0 8px;
   font-size: 1.1rem;
 }
@@ -287,7 +287,6 @@
    RESPONSIVE DESIGN
 =========================================== */
 
-/* Large Tablets & Small Desktops */
 @media screen and (max-width: 1200px) {
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -299,7 +298,6 @@
   }
 }
 
-/* Tablets */
 @media screen and (max-width: 900px) {
   .pageContent {
     padding: 16px 16px 36px;
@@ -327,7 +325,6 @@
   }
 }
 
-/* Mobile Landscape & Small Tablets */
 @media screen and (max-width: 768px) {
   .pageContent {
     padding: 12px 12px 32px;
@@ -376,7 +373,6 @@
   }
 }
 
-/* Mobile Portrait */
 @media screen and (max-width: 480px) {
   .pageContent {
     padding: 8px 8px 24px;
@@ -428,7 +424,7 @@
 }
 
 /* ===========================================
-   ACCESSIBILITY & ANIMATIONS
+   ACCESSIBILITY
 =========================================== */
 @media (prefers-reduced-motion: reduce) {
   .card,
@@ -447,14 +443,14 @@
   }
 }
 
-/* Focus States for Accessibility */
 .paginationBtn:focus-visible,
 .cardButton:focus-visible {
-  outline: 2px solid var(--sd-primary);
+  outline: 2px solid var(--sub-primary);
   outline-offset: 2px;
 }
 
 .card:focus-within {
-  border-color: var(--sd-primary);
+  border-color: var(--sub-primary);
   box-shadow: 0 0 0 3px rgba(255, 208, 105, 0.2);
 }
+

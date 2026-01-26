@@ -1,102 +1,76 @@
-import jenkinsProjects from './jenkins-projects.json';
-import Image from 'next/image';
-import styles from './JenkinsProjects.module.css';
+import projects from './jenkins-projects.json';
+import Link from 'next/link';
+import { BlogGrid, BlogPagination } from '../../../../shared/components';
+import styles from '../../../../shared/BlogPage.module.css';
 
+// Configuration
 const PROJECTS_PER_PAGE = 6;
 
+/**
+ * Generate static params for all pages
+ */
 export function generateStaticParams() {
-  const totalPages = Math.ceil(jenkinsProjects.length / PROJECTS_PER_PAGE);
+  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
   return Array.from({ length: totalPages }, (_, i) => ({
     page: (i + 1).toString(),
   }));
 }
 
-export default async function JenkinsProjectsPage({ params }) {
-  const page = parseInt((await params).page, 10) || 1;
-  const totalPages = Math.ceil(jenkinsProjects.length / PROJECTS_PER_PAGE);
-  const startIdx = (page - 1) * PROJECTS_PER_PAGE;
-  const endIdx = startIdx + PROJECTS_PER_PAGE;
-  const currentProjects = jenkinsProjects.slice(startIdx, endIdx);
-
-  // Format date function
-  const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'short', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
+/**
+ * Generate metadata for SEO
+ */
+export async function generateMetadata({ params }) {
+  const { page } = await params;
+  return {
+    title: `Jenkins Projects - Page ${page} | DevOps`,
+    description: 'Explore Jenkins CI/CD projects with pipelines, automation, and continuous integration.',
   };
+}
+
+/**
+ * Jenkins Projects Page Component
+ */
+export default async function JenkinsProjectsPage({ params }) {
+  const { page } = await params;
+  const currentPage = parseInt(page, 10) || 1;
+  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+  
+  const startIdx = (currentPage - 1) * PROJECTS_PER_PAGE;
+  const currentProjects = projects.slice(startIdx, startIdx + PROJECTS_PER_PAGE);
 
   return (
-    <div className={styles.jenkinsProjectsBg}>
-      <main className={styles.jenkinsProjectsMain}>
-        <h1 className={styles.jenkinsProjectsTitle}>Jenkins Projects</h1>
-        <section className={styles.projectsGrid}>
-          {currentProjects.map((project, idx) => (
-            <div className={styles.projectCard} key={startIdx + idx}>
-              <a href={project.link} className={styles.cardLink} target="_blank" rel="noopener noreferrer">
-                <figure className={styles.bannerBox}>
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={400}
-                    height={200}
-                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                    unoptimized={false}
-                  />
-                </figure>
-                <div className={styles.cardContent}>
-                  <div className={styles.cardMeta}>
-                    <p className={styles.cardCategory}>{project.category}</p>
-                    {project.date && (
-                      <>
-                        <span className={styles.dot}></span>
-                        <time dateTime={project.date} className={styles.cardDate}>
-                          {formatDate(project.date)}
-                        </time>
-                      </>
-                    )}
-                  </div>
-                  <h3 className={styles.cardTitle}>{project.title}</h3>
-                  <p className={styles.cardText}>{project.description}</p>
-                </div>
-              </a>
-            </div>
-          ))}
-        </section>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', margin: '32px 0', marginTop: 'auto', paddingTop: '20px' }}>
-          <a
-            href={page > 1 ? `/devops-projects/jenkins-projects/page/${page - 1}` : '#'}
-            style={{
-              pointerEvents: page === 1 ? 'none' : 'auto',
-              opacity: page === 1 ? 0.5 : 1,
-              padding: '8px 16px',
-              borderRadius: '6px',
-              border: 'none',
-              background: '#222',
-              color: '#fff',
-              textDecoration: 'none',
-            }}
-          >
-            Prev
-          </a>
-          <span style={{ color: '#fff', alignSelf: 'center' }}>
-            Page {page} of {totalPages}
-          </span>
-          <a
-            href={page < totalPages ? `/devops-projects/jenkins-projects/page/${page + 1}` : '#'}
-            style={{
-              pointerEvents: page === totalPages ? 'none' : 'auto',
-              opacity: page === totalPages ? 0.5 : 1,
-              padding: '8px 16px',
-              borderRadius: '6px',
-              border: 'none',
-              background: '#222',
-              color: '#fff',
-              textDecoration: 'none',
-            }}
-          >
-            Next
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className={styles.pageMain}>
+      <div className={styles.pageContent}>
+        {/* Breadcrumb Navigation */}
+        <nav className={styles.breadcrumb}>
+          <Link href="/devops-projects/page/1" className={styles.breadcrumbLink}>
+            DevOps Projects
+          </Link>
+          <span className={styles.breadcrumbSeparator}>›</span>
+          <span className={styles.breadcrumbCurrent}>Jenkins</span>
+        </nav>
+
+        <header className={styles.pageHeader}>
+          <h1 className={styles.pageTitle}>Jenkins Projects</h1>
+          <p className={styles.pageSubtitle}>
+            CI/CD pipelines, automation & continuous integration
+          </p>
+        </header>
+
+        <BlogGrid 
+          items={currentProjects}
+          buttonText="View Project"
+          emptyIcon="🔧"
+          emptyTitle="No projects found"
+          emptyText="Check back later for new Jenkins projects."
+        />
+
+        <BlogPagination 
+          basePath="/devops-projects/jenkins-projects/page"
+          currentPage={currentPage}
+          totalPages={totalPages}
+        />
+      </div>
+    </main>
   );
-} 
+}

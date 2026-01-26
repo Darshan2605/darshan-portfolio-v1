@@ -1,141 +1,460 @@
-.awsProjectsBg {
-  
+/*-----------------------------------*\
+  AWS PROJECTS - Production Grade Styles
+  Matching Portfolio Card Design
+\*-----------------------------------*/
+
+/* CSS Variables for consistency */
+:root {
+  --aws-primary: hsl(45, 100%, 72%);
+  --aws-primary-hover: hsl(45, 100%, 60%);
+  --aws-bg-dark: hsl(240, 2%, 12%);
+  --aws-bg-card: hsl(240, 2%, 15%);
+  --aws-bg-card-hover: hsl(240, 2%, 18%);
+  --aws-border: hsl(0, 0%, 22%);
+  --aws-text-primary: hsl(0, 0%, 98%);
+  --aws-text-secondary: hsl(0, 0%, 70%);
+  --aws-shadow: rgba(0, 0, 0, 0.3);
+  --aws-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===========================================
+   PAGE CONTAINER
+=========================================== */
+.pageContainer {
   min-height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  width: 100%;
 }
 
-.awsProjectsMain {
-  max-width: 1200px;
+.pageContent {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-  z-index: 1;
+  padding: 24px 24px 48px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
 }
 
-.awsProjectsTitle {
+/* ===========================================
+   PAGE HEADER
+=========================================== */
+.pageHeader {
   text-align: center;
-  color: hsl(45, 100%, 72%);
-  margin-bottom: 30px;
-  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 20px;
 }
 
-.blogPosts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin: 30px auto 0 auto;
-  width: 100%;
+.pageTitle {
+  background: linear-gradient(135deg, var(--aws-primary) 0%, #e67e22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
 }
 
-.blogPostItem {
-  background: hsl(0, 0%, 17%);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  width: 100%;
-  min-height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.blogPostItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.blogBannerBox {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
+.pageSubtitle {
+  color: var(--aws-text-secondary);
+  font-size: 1.1rem;
+  font-weight: 400;
   margin: 0;
 }
 
-.blogBannerBox img {
+/* ===========================================
+   CARDS GRID
+=========================================== */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+}
+
+/* ===========================================
+   CARD COMPONENT
+=========================================== */
+.card {
+  background: linear-gradient(135deg, var(--aws-bg-card), var(--aws-bg-dark));
+  border: 1.5px solid var(--aws-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: var(--aws-transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px var(--aws-shadow);
+  border-color: var(--aws-primary);
+}
+
+/* Card Image */
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
-.blogPostItem:hover .blogBannerBox img {
+.card:hover .cardImage {
+  transform: scale(1.08);
+}
+
+.cardImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+}
+
+/* Card Content */
+.cardContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.cardCategory {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, var(--aws-primary), #e67e22);
+  color: var(--aws-bg-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--aws-text-primary);
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color var(--aws-transition);
+}
+
+.card:hover .cardTitle {
+  color: var(--aws-primary);
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: var(--aws-text-secondary);
+  margin: 0;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.cardButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--aws-primary), #e67e22);
+  color: var(--aws-bg-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: var(--aws-transition);
+  width: fit-content;
+}
+
+.cardButton:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 208, 105, 0.4);
 }
 
-.blogContent {
-  padding: 20px;
+/* ===========================================
+   EMPTY STATE
+=========================================== */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.blogMeta {
+.emptyStateIcon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+
+.emptyStateTitle {
+  color: var(--aws-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.emptyStateText {
+  color: var(--aws-text-secondary);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ===========================================
+   PAGINATION
+=========================================== */
+.paginationNav {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 48px;
+  padding: 20px 0 32px;
+  flex-wrap: wrap;
 }
 
-.blogCategory {
-  color: hsl(45, 100%, 72%);
+.paginationPages {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.paginationBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 16px;
+  background: linear-gradient(135deg, var(--aws-bg-card), var(--aws-bg-dark));
+  color: var(--aws-text-primary);
+  border: 1.5px solid var(--aws-border);
+  border-radius: 10px;
+  font-size: 0.95rem;
   font-weight: 500;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-.blogItemTitle {
-  color: hsl(0, 0%, 100%);
-  font-size: 1.3em;
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
-
-.blogText {
-  color: hsl(0, 0%, 80%);
-  font-size: 0.9em;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.blogPostLink {
+  cursor: pointer;
+  transition: var(--aws-transition);
   text-decoration: none;
-  color: inherit;
-  display: block;
 }
 
+.paginationBtn:hover:not(.paginationBtnDisabled):not(.paginationBtnActive) {
+  background: var(--aws-bg-card-hover);
+  border-color: var(--aws-primary);
+  transform: translateY(-2px);
+}
+
+.paginationBtnActive {
+  background: linear-gradient(135deg, var(--aws-primary), #e67e22) !important;
+  color: var(--aws-bg-dark) !important;
+  border-color: var(--aws-primary) !important;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 208, 105, 0.3);
+}
+
+.paginationBtnDisabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.paginationEllipsis {
+  color: var(--aws-text-secondary);
+  padding: 0 8px;
+  font-size: 1.1rem;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+=========================================== */
+
+/* Large Tablets & Small Desktops */
 @media screen and (max-width: 1200px) {
-  .blogPosts {
-    grid-template-columns: 1fr 1fr;
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .pageContent {
+    padding: 20px 20px 40px;
   }
 }
 
+/* Tablets */
 @media screen and (max-width: 900px) {
-  .blogPosts {
-    grid-template-columns: 1fr 1fr;
+  .pageContent {
+    padding: 16px 16px 36px;
   }
-  .blogPostItem {
-    min-height: 300px;
+
+  .pageHeader {
+    margin-bottom: 32px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    min-height: 380px;
+  }
+
+  .cardImageWrapper {
+    height: 180px;
+  }
+
+  .cardContent {
+    padding: 20px;
   }
 }
 
+/* Mobile Landscape & Small Tablets */
 @media screen and (max-width: 768px) {
-  .awsProjectsMain {
-    padding: 24px 8px 10px 8px;
-    max-width: 100vw;
+  .pageContent {
+    padding: 12px 12px 32px;
   }
-  .blogPosts {
+
+  .pageHeader {
+    margin-bottom: 24px;
+    padding-top: 12px;
+  }
+
+  .pageSubtitle {
+    font-size: 1rem;
+  }
+
+  .cardsGrid {
     grid-template-columns: 1fr;
-    padding: 0;
+    gap: 16px;
   }
-  .blogPostItem {
-    min-height: 250px;
-    width: 100%;
+
+  .card {
+    min-height: auto;
   }
-  .blogItemTitle {
-    font-size: 1.2em;
+
+  .cardImageWrapper {
+    height: 200px;
   }
-} 
+
+  .cardContent {
+    padding: 18px;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .paginationNav {
+    gap: 8px;
+    margin-top: 32px;
+  }
+
+  .paginationBtn {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 480px) {
+  .pageContent {
+    padding: 8px 8px 24px;
+  }
+
+  .pageTitle {
+    font-size: 1.75rem;
+  }
+
+  .pageSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .cardContent {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .cardCategory {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .cardButton {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  .paginationPages {
+    gap: 4px;
+  }
+
+  .paginationBtn {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+}
+
+/* ===========================================
+   ACCESSIBILITY & ANIMATIONS
+=========================================== */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .paginationBtn,
+  .cardButton,
+  .cardImage {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .cardImage {
+    transform: none;
+  }
+}
+
+/* Focus States for Accessibility */
+.paginationBtn:focus-visible,
+.cardButton:focus-visible {
+  outline: 2px solid var(--aws-primary);
+  outline-offset: 2px;
+}
+
+.card:focus-within {
+  border-color: var(--aws-primary);
+  box-shadow: 0 0 0 3px rgba(255, 208, 105, 0.2);
+}

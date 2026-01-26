@@ -1,20 +1,13 @@
-"use client";
-import Link from 'next/link';
-import styles from './AwsBlogs.module.css';
+import { BlogFilter } from '../../shared/components';
 
 export default function AwsBlogsFilter({ services, currentService }) {
+  const getFilterPath = (service) => `/aws-blogs/${encodeURIComponent(service)}/page/1`;
+  
   return (
-    <div className={styles.filterContainer}>
-      {services.map(service => (
-        <Link
-          key={service}
-          href={`/aws-blogs/${encodeURIComponent(service)}/page/1`}
-          className={`${styles.serviceFilter} ${service === currentService ? styles.active : ''}`}
-          prefetch={false}
-        >
-          {service}
-        </Link>
-      ))}
-    </div>
+    <BlogFilter 
+      filters={services}
+      currentFilter={currentService}
+      getFilterPath={getFilterPath}
+    />
   );
 }

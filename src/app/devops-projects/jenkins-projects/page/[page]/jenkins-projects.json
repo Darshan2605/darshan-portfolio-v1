@@ -10,7 +10,7 @@
   {
     "title": "Automating Node.js Build with Jenkins and Github WebHook",
     "category": "Jenkins Automation",
-    "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*_7rcd8KpQHoWINwkxaUGLg.png",
+    "image": "https://lh3.googleusercontent.com/d/1dqc5jydorDYYwX0O6RoeNaNfDLsWlno5",
     "link": "https://medium.com/@darshanlondhe9/automating-a-node-js-application-build-using-jenkins-and-github-webhook-free-style-project-87043f915c97",
     "description": "Step-by-step guide on automating Node.js application builds using Jenkins Free Style Project and GitHub Webhook integration.",
     "date": "2025-01-14"
@@ -26,7 +26,7 @@
   {
     "title": "Automating Node.js Build with Jenkins Pipeline (Groovy)",
     "category": "Jenkins Pipeline",
-    "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*_7rcd8KpQHoWINwkxaUGLg.png",
+    "image": "https://lh3.googleusercontent.com/d/1Ep2sxQqdYj--WuDI16mOp2VqJu-aTFDA",
     "link": "https://medium.com/@darshanlondhe9/automating-a-node-js-application-build-using-jenkins-pipeline-groovy-syntax-github-webhook-00b633a2e57c",
     "description": "Learn how to automate Node.js builds using Jenkins Pipeline with Groovy syntax and GitHub Webhook integration for both local and public Jenkins servers.",
     "date": "2025-01-12"
@@ -34,7 +34,7 @@
   {
     "title": "Automating Docker Image Build and Push on Docker Hub with Jenkins & Slack Notifications",
     "category": "Jenkins Pipeline + Slack + GitHub + DockerHub",
-    "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*58t8TabkS3I2gCWXScqlEg.jpeg",
+    "image": "https://lh3.googleusercontent.com/d/1NMCSSCK9F7F-kkeSWUCQW2zu8g3YU9Oc",
     "link": "https://medium.com/@darshanlondhe9/automating-docker-image-build-and-push-on-docker-hub-with-jenkins-slack-notifications-555aaf526e14",
     "description": "This project aims to automate the process of building a Docker image and pushing it to Docker Hub using Jenkins. Additionally, Slack notifications will be integrated to provide real-time updates on the build status.",
     "date": "2025-01-11"

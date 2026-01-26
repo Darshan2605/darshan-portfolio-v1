@@ -1,4 +1,5 @@
-import { FaBook, FaBriefcase } from "react-icons/fa";
+import Image from "next/image";
+import { FaBriefcase } from "react-icons/fa";
 
 export default function Resume() {
   return (
@@ -6,124 +7,82 @@ export default function Resume() {
       <header>
         <h2 className="h2 article-title">Resume</h2>
       </header>
-      <span className="download-cv">
-        <a href="https://drive.google.com/file/d/1uGT_gRYStNvcrc8XqxEKXqJ1bO6xhcVj/view?usp=sharing" className="download-btn" download>
-          <button type="button" className="btn-download">Download CV</button>
-        </a>
-      </span>
-      {/* Education Timeline */}
-      <section className="timeline">
-        <div className="title-wrapper">
-          <div className="icon-box">
-            <FaBook />
-          </div>
-          <h3 className="h3">Education</h3>
-        </div>
-        <ol className="timeline-list">
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Savitribai Phule Pune University</h4>
-            <span>November 2021 — May 2025</span>
-            <p className="timeline-text">
-              BE in Computer Science Engineering
-              <br />GPA: 8.3/10
-              <br />Coursework: Data Structures and Algorithms, Object Oriented Programming, Database Management System, Computer Networks, Operating System.
-            </p>
-          </li>
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Shri Shiv Chhatrapati College Junnar</h4>
-            <span>May 2021</span>
-            <p className="timeline-text">Class XII - Percentage: 99%</p>
-          </li>
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">SBPV Junnar</h4>
-            <span>May 2019</span>
-            <p className="timeline-text">Class X - Percentage: 98.2%</p>
-          </li>
-        </ol>
-      </section>
-      {/* Projects Timeline */}
+
+      {/* Experience Timeline */}
       <section className="timeline">
         <div className="title-wrapper">
           <div className="icon-box">
             <FaBriefcase />
           </div>
-          <h3 className="h3">Projects</h3>
+          <h3 className="h3">Experience</h3>
         </div>
         <ol className="timeline-list">
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">AWS Blogs</h4>
-            <span><a className="project-link" href="https://darshanlondheportfolio-darshans-projects-18f1c87b.vercel.app/aws-blogs.html">Project Link</a></span>
-            <p className="timeline-text">
-              • Authored and published AWS tutorials on Medium, providing step-by-step guidance on AWS services.
-            </p>
-          </li>
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">CI/CD for Static Website Hosting on EC2</h4>
-            <span><a className="project-link" href="https://medium.com/@darshanlondhe9/how-to-host-static-website-from-github-repo-on-ec2-using-code-pipeline-service-ci-cd-automation-8bc51f6ff707">Project Link</a></span>
-            <p className="timeline-text">
-              • Engineered an automated CI/CD pipeline integrating GitHub with AWS CodePipeline, CodeDeploy, and CodeBuild to deploy a static website to EC2.
-              <br />• Technologies: AWS CodePipeline, CodeDeploy, CodeBuild, EC2, GitHub, GitHub Actions, GitHub Secrets, AWS IAM.
-            </p>
-          </li>
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Node.js Deployment on AWS ECS Fargate</h4>
-            <span><a className="project-link" href="https://medium.com/@darshanlondhe9/automating-node-js-bfe1f15f113d">Project Link</a></span>
-            <p className="timeline-text">
-              • Automated the deployment of a containerized Node.js app using Docker, pushed to ECR, and deployed to ECS Fargate with Application Load Balancer configuration.
-              <br />• Technologies: Node.js, Docker, AWS ECS Fargate, ECR, ALB.
-            </p>
-          </li>
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Jenkins CI/CD for Docker with Slack Notifications</h4>
-            <span><a className="project-link" href="https://medium.com/@darshanlondhe9/automating-docker-image-build-and-push-on-docker-hub-with-jenkins-slack-notifications-555aaf526e14">Project Link</a></span>
-            <p className="timeline-text">
-              • Engineered a Jenkins pipeline to automate Docker image builds and push to Docker Hub with Slack integration for real-time build alerts.
-              <br />• Technologies: Jenkins, Docker, GitHub, Docker Hub, Slack.
-            </p>
-          </li>
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">NAT Gateway Setup for Private EC2 Access</h4>
-            <span><a className="project-link" href="https://medium.com/@darshanlondhe9/step-by-step-guide-to-setting-up-a-nat-gateway-and-connecting-private-ec2-to-the-internet-562cba5822ad">Project Link</a></span>
-            <p className="timeline-text">
-              • Published a comprehensive tutorial on configuring a NAT Gateway, subnets, and routing to enable internet access for private EC2 instances.
-              <br />• Technologies: AWS VPC, NAT Gateway, EC2, Subnets, Route Tables.
-            </p>
+          <li className="timeline-item experience-item">
+            <div className="experience-header">
+              <div className="company-logo-wrapper">
+                <Image
+                  src="https://media.licdn.com/dms/image/v2/D560BAQFZf38aFfkISw/company-logo_200_200/company-logo_200_200/0/1667724589098/emplay_inc__logo?e=2147483647&v=beta&t=u70ODWLdNjWunki16BuUksxRCnQzEplABFNLEv_M2ww"
+                  alt="Emplay Inc Logo"
+                  width={60}
+                  height={60}
+                  className="company-logo"
+                />
+              </div>
+              <div className="experience-title-info">
+                <h4 className="h4 timeline-item-title">DevOps Intern</h4>
+                <p className="company-name">Emplay Inc</p>
+                <span className="experience-duration">July 2025 — January 2026</span>
+              </div>
+            </div>
+            
+            <div className="experience-details">
+              <p className="company-description">
+                <strong>Emplay Inc</strong> is an Agentic AI product company providing autonomous sales, support, and HR solutions 
+                through its flagship "Agentic AI" platform, Zingerx.
+              </p>
+              
+              <div className="project-highlight">
+                <h5 className="project-title">Project: Zingerx Product</h5>
+                <p className="client-info">
+                  <strong>Client:</strong> Hewlett Packard Enterprise (HPE)
+                </p>
+                <p className="project-description">
+                  Zingerx is a Low-Code/No-Code platform that lets enterprises hire, train, and manage AI agents conversationally. 
+                  By using 'Meta-Agents', users can simply type natural language prompts to generate autonomous workflows for Sales, Support, and HR. 
+                  The system utilizes Agentic RAG to handle complex tasks, such as detailed RFP analysis, without requiring technical expertise.
+                </p>
+              </div>
+
+              <div className="responsibilities-section">
+                <h5 className="responsibilities-title">What I Did:</h5>
+                <ul className="responsibilities-list">
+                  <li>Managed HPE's staging & production servers</li>
+                  <li>Handled AKS clusters on Azure for deployments</li>
+                  <li>Wrote Bash scripts to automate Zingerx deployment and DB backups on Azure</li>
+                  <li>Built AWS Cost Reports for spending analysis of Emplay Inc. on AWS</li>
+                  <li>Cut ZingerxDocker image size by 50% using Distroless images</li>
+                  <li>Set up Grafana dashboards for monitoring HPE's Staging and Production AKS clusters on Azure</li>
+                </ul>
+              </div>
+
+              <div className="tech-stack-section">
+                <h5 className="tech-stack-title">Technologies Used:</h5>
+                <div className="tech-tags">
+                  <span className="tech-tag">AWS</span>
+                  <span className="tech-tag">Azure</span>
+                  <span className="tech-tag">Docker</span>
+                  <span className="tech-tag">Kubernetes</span>
+                  <span className="tech-tag">AKS</span>
+                  <span className="tech-tag">Grafana</span>
+                  <span className="tech-tag">Bash Scripting</span>
+                  <span className="tech-tag">CI/CD</span>
+                  <span className="tech-tag">Distroless Images</span>
+                </div>
+              </div>
+            </div>
           </li>
         </ol>
       </section>
-      {/* Skills */}
-      <section className="skill">
-        <h3 className="h3 skills-title">My skills</h3>
-        <ul className="skills-list content-card">
-          <li className="skills-item">
-            <div className="title-wrapper">
-              <h5 className="h5">MERN Stack</h5>
-              <data value="95">95%</data>
-            </div>
-            <div className="skill-progress-bg">
-              <div className="skill-progress-fill" style={{ width: '95%' }}></div>
-            </div>
-          </li>
-          <li className="skills-item">
-            <div className="title-wrapper">
-              <h5 className="h5">DevOps</h5>
-              <data value="90">90%</data>
-            </div>
-            <div className="skill-progress-bg">
-              <div className="skill-progress-fill" style={{ width: '90%' }}></div>
-            </div>
-          </li>
-          <li className="skills-item">
-            <div className="title-wrapper">
-              <h5 className="h5">Photoshop</h5>
-              <data value="90">90%</data>
-            </div>
-            <div className="skill-progress-bg">
-              <div className="skill-progress-fill" style={{ width: '90%' }}></div>
-            </div>
-          </li>
-        </ul>
-      </section>
     </article>
   );
-} 
+}
